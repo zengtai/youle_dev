@@ -1,34 +1,20 @@
 import { getLocalData } from "../../lib/api";
-import Link from "next/link";
-import Image from "../../components/Image";
 import Layout from "../../components/Layout";
+import List from "../../components/List";
+import Breadcrumb from "../../components/Breadcrumb";
 
 export default function Category({ data, category, categories }) {
   console.log(`data`, data);
+  console.log(`category`, category);
   return (
     <Layout navItems={categories}>
-      <div className="container mx-auto">
+      <div className="game-category container mx-auto">
+        <Breadcrumb item={category} />
         <section className="my-8 mx-6">
           <header className="my-3 flex gap-2">
             <h1 className="font-bold">{`${category} Games`}</h1>
           </header>
-          <ul className="grid grid-cols-3 gap-4">
-            {data.map((game) => (
-              <li key={game.id}>
-                <Link href={`/game/${game.slug}`}>
-                  <a>
-                    <Image
-                      src={game.thumbnailUrl}
-                      alt={game.title}
-                      width={100}
-                      height={100}
-                    />
-                    <h2 className="text-xs">{game.title}</h2>
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <List items={data} />
         </section>
       </div>
     </Layout>

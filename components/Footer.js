@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <footer className="flex justify-center border-t p-6 text-xs">
         <p>
-          {`Copyright &copy; ${new Date().getFullYear()} ${SITE_META.name}. All
+          {`Copyright © ${new Date().getFullYear()} ${SITE_META.name}. All
           Rights Reserved.`}
         </p>
       </footer>

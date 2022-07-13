@@ -7,8 +7,13 @@ export default function ListItem({ item }) {
       <li>
         <Link href={`/game/${item.slug}`}>
           <a title={item.title}>
-            <Image src={item.icon_url} alt={item.title} />
-            <h2>{item.title}</h2>
+            <Image
+              appid={`${item.title}`}
+              alt={item.title}
+              width={100}
+              height={100}
+            />
+            <h2 className="text-xs">{item.title}</h2>
           </a>
         </Link>
       </li>

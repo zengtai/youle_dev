@@ -1,23 +1,21 @@
 import Link from "next/link";
 import Image from "../../components/Image";
 import Layout from "../../components/Layout";
+import List from "../../components/List";
 import { getLocalData } from "../../lib/api";
+import Breadcrumb from "../../components/Breadcrumb";
 
 export default function Game({ data, related, categories }) {
   console.log(`data`, data);
   return (
     <Layout navItems={categories}>
-      <div className="container mx-auto">
+      <div className="game-detail container mx-auto">
+        <Breadcrumb item={data} />
         <section className="my-8 mx-6">
           <div>
             <h1>{data.title}</h1>
             <div>
-              <Image
-                src={data.thumbnailUrl}
-                alt={data.title}
-                width={200}
-                height={200}
-              />
+              <Image alt={data.title} width={200} height={200} />
             </div>
             <div>
               <Link href={`/category/${data.category.slug}`}>
@@ -28,23 +26,7 @@ export default function Game({ data, related, categories }) {
           </div>
           <div>
             <h2>You May Also Like</h2>
-            <ul className="grid grid-cols-3 gap-4">
-              {related.map((game) => (
-                <li key={game.id}>
-                  <Link href={`/game/${game.slug}`}>
-                    <a>
-                      <Image
-                        src={game.thumbnailUrl}
-                        alt={game.title}
-                        width={100}
-                        height={100}
-                      />
-                      <h2 className="text-xs">{game.title}</h2>
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <List items={related} />
           </div>
         </section>
       </div>

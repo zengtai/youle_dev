@@ -1,8 +1,8 @@
 import Layout from "../components/Layout";
 
-export default function Custom404(params) {
+export default function Custom404({ categories }) {
   return (
-    <Layout>
+    <Layout navItems={categories}>
       <div className="container">
         <h1>404</h1>
         <p>Page not found.</p>

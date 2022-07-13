@@ -1,9 +1,33 @@
-import NextImage from "next/image";
+// import NextImage from "next/image";
 
-const customLoader = ({ src }) => {
-  return src;
-};
+// const customLoader = ({ src }) => {
+//   return src;
+// };
 
-export default function Image(props) {
-  return <NextImage {...props} loader={customLoader} unoptimized="true" />;
+export default function Image({ alt, width, height, lazy }) {
+  // return <NextImage {...props} loader={customLoader} unoptimized="true" />;
+  // return <img {...props} />;
+
+  let srcId = alt.replace(/\s/g, "");
+  return (
+    <picture>
+      <source
+        type="image/avif"
+        srcSet={`https://cdn.iwantalipstick.com/gameicon2/avif/${srcId}.avif`}
+      />
+      <source
+        type="image/webp"
+        srcSet={`https://cdn.iwantalipstick.com/gameicon2/webp/${srcId}.webp`}
+      />
+      <img
+        className="bg-black/5"
+        width={width ? width : "100%"}
+        height={height ? height : "100%"}
+        src={`https://cdn.iwantalipstick.com/gameicon2/jpg/${srcId}.jpg`}
+        alt={alt}
+        loading={lazy ? "lazy" : "eager"}
+        decoding="async"
+      />
+    </picture>
+  );
 }
