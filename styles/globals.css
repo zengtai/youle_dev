@@ -2,10 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  @apply text-xl font-bold;
+body {
+  @apply bg-gradient-to-br from-emerald-700 to-emerald-900 bg-fixed text-white/80;
+}
+
+main {
+  @apply mt-12 xl:mt-0;
+}
+
+.site-header {
+  @apply fixed z-50 w-full xl:static;
+}
+
+.navbar,
+.navbar-nav {
+  @apply gap-2 xl:gap-8;
+}
+
+.navbar {
+  @apply justify-between border-b border-black/10 bg-black/5 text-sm font-bold text-white/80 backdrop-blur backdrop-filter xl:flex;
+}
+
+.navbar {
+  @apply xl:relative xl:m-4 xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-b xl:from-yellow-500 xl:to-amber-500 xl:shadow-lg xl:shadow-black/20;
+}
+
+.navbar-nav {
+  @apply m-4 mt-0 rounded-3xl bg-gradient-to-b from-yellow-500 to-amber-500 p-4 shadow-lg shadow-black/20 xl:m-0 xl:bg-none xl:p-3 xl:shadow-none;
+}
+
+.navbar-nav li {
+  @apply rounded-lg border-2 border-white/10 bg-white/10 p-2 xl:border-transparent xl:bg-transparent xl:hover:bg-white/20;
+}
+
+.navbar-nav a {
+  @apply drop-shadow;
+}
+
+.navbar-brand {
+  @apply absolute flex h-10 w-10 items-center justify-center overflow-hidden rounded-full xl:left-3 xl:top-3 xl:bg-white;
+}
+
+.navbar-toggler {
+  @apply ml-auto flex h-10 w-10 items-center justify-center text-yellow-300 lg:hidden;
+}
+
+.icon-home {
+  @apply text-yellow-300 xl:text-emerald-700;
+}
+
+.icon-menu {
+  @apply text-yellow-300;
+}
+
+.game-list {
+  @apply mx-4 grid grid-cols-3 gap-4 xl:grid-cols-12;
+}
+
+.section-title {
+  @apply text-yellow-100/70 drop-shadow;
+}
+
+.list-item-title {
+  @apply m-2 h-10 text-center text-xs leading-4;
+}
+
+.site-footer {
+  @apply flex flex-col items-center bg-emerald-700/80 text-xs text-yellow-100/50;
+}
+
+.site-footer p {
+  @apply py-6 opacity-60;
+}
+
+.site-footer-nav {
+  @apply flex w-full justify-center gap-4 bg-emerald-600/80 p-2;
 }
 
 .breadcrumb {
-  @apply text-sm;
+  @apply mx-4 flex gap-6 border-b border-black/10 py-3 text-xs;
+}
+
+.breadcrumb-item {
+  @apply relative after:absolute after:-right-4 after:opacity-50 after:content-['/'];
+}
+
+.game-category .section-title {
+  @apply my-4 mx-4 text-2xl;
+}
+
+.home section {
+  @apply mb-4;
 }

@@ -8,7 +8,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 export default function Game({ data, related, categories }) {
   console.log(`data`, data);
   return (
-    <Layout navItems={categories}>
+    <Layout navItems={categories} title={data.title}>
       <div className="game-detail container mx-auto">
         <Breadcrumb item={data} />
         <section className="my-8 mx-6">

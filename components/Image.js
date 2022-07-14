@@ -10,7 +10,7 @@ export default function Image({ alt, width, height, lazy }) {
 
   let srcId = alt.replace(/\s/g, "");
   return (
-    <picture>
+    <picture className="block overflow-hidden rounded-xl shadow-lg">
       <source
         type="image/avif"
         srcSet={`https://cdn.iwantalipstick.com/gameicon2/avif/${srcId}.avif`}

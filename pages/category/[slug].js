@@ -7,11 +7,11 @@ export default function Category({ data, category, categories }) {
   console.log(`data`, data);
   console.log(`category`, category);
   return (
-    <Layout navItems={categories}>
+    <Layout navItems={categories} title={`${category} Games`}>
       <div className="game-category container mx-auto">
         <Breadcrumb item={category} />
-        <section className="my-8 mx-6">
-          <header className="my-3 flex gap-2">
+        <section className="my-4">
+          <header className="section-title">
             <h1 className="font-bold">{`${category} Games`}</h1>
           </header>
           <List items={data} />

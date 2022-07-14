@@ -28,15 +28,11 @@ export default function Breadcrumb({ item }) {
         },
       ];
   return (
-    <ol className="breadcrumb mx-6 my-4 flex gap-6">
+    <ol className="breadcrumb">
       {routes.map((item, index) => (
         <li
           key={item.title}
-          className={
-            index < routes.length - 1
-              ? `relative after:absolute after:-right-4 after:opacity-50 after:content-['/']`
-              : ``
-          }
+          className={index < routes.length - 1 ? `breadcrumb-item` : ``}
         >
           {item.path !== null ? (
             <Link href={item.path}>

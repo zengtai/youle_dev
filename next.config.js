@@ -28,6 +28,19 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
+  async headers() {
+    return [
+      {
+        source: "/",
+        headers: [
+          {
+            key: "SameSite",
+            value: "Strict",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
