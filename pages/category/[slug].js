@@ -12,7 +12,7 @@ export default function Category({ data, category, categories }) {
         <Breadcrumb item={category} />
         <section className="my-4">
           <header className="section-title">
-            <h1 className="font-bold">{`${category} Games`}</h1>
+            <h1 className="text-center font-bold">{`${category} Games`}</h1>
           </header>
           <List items={data} />
         </section>

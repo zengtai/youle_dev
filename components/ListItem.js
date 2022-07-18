@@ -36,7 +36,7 @@ export default function ListItem({ item, index }) {
       // case 125:
       //   return "col-span-2 row-span-2 group";
       default:
-        return "group";
+        return "list-item";
     }
   }
   return (
@@ -45,7 +45,9 @@ export default function ListItem({ item, index }) {
         <Link href={`/game/${item.slug}`}>
           <a title={item.title}>
             <Image appid={`${item.title}`} alt={item.title} />
-            <h2 className="list-item-title">{item.title}</h2>
+            <h2 className="list-item-title">
+              <span>{item.title}</span>
+            </h2>
           </a>
         </Link>
       </li>

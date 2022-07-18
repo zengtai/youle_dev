@@ -63,10 +63,6 @@ main {
   @apply text-yellow-100/70 drop-shadow;
 }
 
-.list-item-title {
-  @apply m-2 h-10 text-center text-xs leading-4;
-}
-
 .site-footer {
   @apply flex flex-col items-center bg-emerald-700/80 text-xs text-yellow-100/50;
 }
@@ -93,4 +89,44 @@ main {
 
 .home section {
   @apply mb-4;
+}
+
+.home section ul {
+  @apply mb-4;
+}
+
+.list-item {
+  @apply overflow-hidden rounded-lg;
+}
+
+.list-item a {
+  @apply relative block overflow-hidden;
+}
+
+.list-item a:hover {
+  @apply xl:flex xl:justify-end;
+}
+
+.list-item a:hover .list-item-title {
+  @apply xl:bottom-0 xl:bg-gradient-to-b xl:from-black/0 xl:to-black/80;
+}
+
+.list-item-title {
+  @apply absolute -bottom-full left-1/2 flex h-full w-full -translate-x-1/2 items-end justify-center p-2 text-center text-xs leading-4;
+}
+
+.play-button {
+  @apply grow rounded-full bg-gradient-to-r from-yellow-500 to-orange-400 py-3 px-9 text-center text-lg font-bold text-white shadow-xl shadow-black/20 transition-transform;
+}
+
+.game-detail .game-list {
+  @apply grid-cols-3;
+}
+
+.game-detail h1 {
+  @apply pb-2 text-xl font-semibold md:text-3xl;
+}
+
+.list-item {
+  @apply overflow-hidden rounded-2xl shadow-lg shadow-black/20;
 }
