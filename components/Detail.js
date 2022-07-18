@@ -4,8 +4,8 @@ import Image from "./Image";
 
 export default function Detail({ data }) {
   const breadcrumbData = { title: data.title, category: data.category };
-  console.log(`Detail data: `, data);
-  console.log(`Breadcrumb data: `, breadcrumbData);
+  // console.log(`Detail data: `, data);
+  // console.log(`Breadcrumb data: `, breadcrumbData);
   return (
     <>
       <section className="col-span-6 col-start-4 m-4 rounded-3xl border-8 border-blue-50 bg-white text-slate-500 xl:mx-6 xl:mt-0 xl:mb-4">
