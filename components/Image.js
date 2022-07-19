@@ -23,7 +23,7 @@ export default function Image({ alt, width, height, lazy }) {
         className="bg-black/5"
         width={width ? width : "100%"}
         height={height ? height : "100%"}
-        src={`https://cdn.iwantalipstick.com/gameicon2/jpg/${srcId}.jpg`}
+        src={`https://cdn.iwantalipstick.com/gameicon2/png/${srcId}.png`}
         alt={alt}
         loading={lazy ? "lazy" : "eager"}
         decoding="async"
