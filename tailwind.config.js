@@ -10,6 +10,9 @@ module.exports = {
       gridTemplateColumns: {
         17: "repeat(17, minmax(0, 1fr))",
       },
+      backgroundImage: {
+        loading: "url('../public/loading.svg')",
+      },
     },
   },
   plugins: [],

@@ -20,7 +20,7 @@ export default function Image({ alt, width, height, lazy }) {
         srcSet={`https://cdn.iwantalipstick.com/gameicon2/webp/${srcId}.webp`}
       />
       <img
-        className="bg-black/5"
+        className="aspect-square bg-black/10 bg-loading bg-center bg-no-repeat"
         width={width ? width : "100%"}
         height={height ? height : "100%"}
         src={`https://cdn.iwantalipstick.com/gameicon2/png/${srcId}.png`}
