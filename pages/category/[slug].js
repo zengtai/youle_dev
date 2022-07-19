@@ -1,11 +1,14 @@
-import { getLocalData } from "../../lib/api";
+import { getListDataBySlugs, getLocalData } from "../../lib/api";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
 import Breadcrumb from "../../components/Breadcrumb";
 
-export default function Category({ data, category, categories }) {
-  console.log(`data`, data);
-  console.log(`category`, category);
+export default function Category({ slugs, category, categories }) {
+  // console.log(`category`, category);
+  // console.log(`slugs`, slugs);
+  let data = getListDataBySlugs(slugs);
+  // console.log(`data`, data);
+
   return (
     <Layout navItems={categories} title={`${category} Games`}>
       <div className="game-category container mx-auto">
@@ -23,10 +26,11 @@ export default function Category({ data, category, categories }) {
 
 export async function getStaticProps(ctx) {
   const data = await getLocalData(`category`, ctx.params.slug);
+  const slugs = data.data.map((item) => item.slug);
 
   return {
     props: {
-      data: data.data,
+      slugs,
       category: data.category,
     },
   };

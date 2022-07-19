@@ -1,15 +1,15 @@
 import Link from "next/link";
+import Head from "next/head";
 import Layout from "../components/Layout";
 import { getLocalData } from "../lib/api";
-import List from "../components/List";
 import ListItem from "../components/ListItem";
-import Head from "next/head";
 
 export default function Home({ data, categories }) {
-  // console.log(`data`, data);
+  console.log(`data`, data);
+  // let tmpData = getListDataBySlugs(slugs);
+
   return (
     <Layout navItems={categories} title={`Home`}>
-      <Head></Head>
       <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
         {data.map((item) => {
           return (

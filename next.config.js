@@ -28,6 +28,12 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
+  // basePath: "/webs/youle",
+  // distDir: "build",
+  // generateBuildId: async () => {
+  //   // You can, for example, get the latest git commit hash here
+  //   return "20220719";
+  // },
   async headers() {
     return [
       {
@@ -35,7 +41,7 @@ const nextConfig = {
         headers: [
           {
             key: "SameSite",
-            value: "Strict",
+            value: "None; Secure",
           },
         ],
       },

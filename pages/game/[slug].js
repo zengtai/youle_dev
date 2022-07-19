@@ -1,53 +1,67 @@
-import Link from "next/link";
-import Image from "../../components/Image";
+// import Head from "next/head";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
-import { getLocalData } from "../../lib/api";
-import Breadcrumb from "../../components/Breadcrumb";
+import { getListDataBySlugs, getLocalData } from "../../lib/api";
+
 import Detail from "../../components/Detail";
 
-export default function Game({ data, related, categories }) {
+export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`data`, data);
 
-  return (
-    <Layout navItems={categories} title={data.title}>
-      <div className="game-detail container mx-auto">
-        <div className="flex flex-col xl:my-6 xl:flex-row">
-          <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
-            <div>
-              <div className="banner mx-auto mb-4 h-[50px] w-[300px] bg-sky-500 xl:h-[90px] xl:w-[728px]"></div>
-              <Detail data={data} />
-            </div>
-            <header className="section-title m-4 xl:sr-only">
-              <h2 className="font-bold">You May Also Like</h2>
-            </header>
-            <List
-              items={related.slice(0, 16)}
-              className={`mx-4 mb-4 grid grid-cols-3 gap-4 xl:mx-6 xl:my-4 xl:grid-cols-8`}
-            />
-          </div>
+  // console.log(`related`, related);
+  // console.log(`relatedSlugs`, relatedSlugs);
 
-          <div className="mb-4 flex flex-col items-center gap-4 xl:order-1 xl:basis-1/3 xl:items-start">
-            <List items={related.slice(16, 37)} />
-            <div className="banner mx-4 hidden h-[50px] w-[300px] bg-sky-500 xl:h-[250px] xl:w-[250px]"></div>
-          </div>
-          <div className="mb-4 flex flex-col items-center gap-4 xl:order-3 xl:basis-1/3 xl:items-end">
-            <List items={related.slice(37)} />
-            <div className="banner mx-4 hidden h-[50px] w-[300px] bg-sky-500 xl:h-[250px] xl:w-[250px]"></div>
+  let related = getListDataBySlugs(relatedSlugs);
+
+  return (
+    <>
+      <Layout navItems={categories} title={data.title}>
+        <div className="game-detail container mx-auto">
+          <div className="flex flex-col xl:my-6 xl:flex-row">
+            <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
+              <div>
+                <div className="banner mx-auto mt-2 mb-4 h-[100px] w-[300px] bg-sky-500 xl:h-[90px] xl:w-[728px]"></div>
+                <Detail data={data} />
+              </div>
+              <header className="section-title m-4 xl:sr-only">
+                <h2 className="font-bold">You May Also Like</h2>
+              </header>
+              <List
+                items={related.slice(0, 18)}
+                className={`mx-4 mb-4 grid grid-cols-3 gap-4 xl:mx-6 xl:my-8 xl:grid-cols-9`}
+              />
+            </div>
+
+            <div className="mb-4 hidden flex-col items-center gap-4 xl:order-1 xl:flex xl:basis-1/3 xl:items-start">
+              <List
+                items={related.slice(18, 30)}
+                className={`mx-4 mb-4 grid grid-cols-3 gap-4 xl:mx-6 xl:my-4 xl:grid-cols-3`}
+              />
+              <div className="banner mx-4 h-[100px] w-[300px] bg-sky-500 xl:h-[250px] xl:w-[250px]"></div>
+            </div>
+            <div className="mb-4 hidden items-center xl:order-3 xl:flex xl:basis-1/3 xl:flex-col xl:items-end xl:gap-4">
+              <List
+                items={related.slice(30, 42)}
+                className={`mx-4 mb-4 grid grid-cols-3 gap-4 xl:mx-6 xl:my-4 xl:grid-cols-3`}
+              />
+              <div className="banner mx-4 h-[100px] w-[300px] bg-sky-500 xl:h-[250px] xl:w-[250px]"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 }
 
 export async function getStaticProps(ctx) {
   const data = await getLocalData(`game`, ctx.params.slug);
+  let related = data.related;
+  let relatedSlugs = related.map((item) => item.slug);
 
   return {
     props: {
       data: data.data,
-      related: data.related,
+      relatedSlugs,
     },
   };
 }

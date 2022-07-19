@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function Breadcrumb({ item }) {
-  console.log(`item`, item);
+  // console.log(`item`, item);
   const routes = item.title
     ? [
         {

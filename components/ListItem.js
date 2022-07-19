@@ -44,7 +44,7 @@ export default function ListItem({ item, index }) {
       <li className={`${handleIndex(index)}`}>
         <Link href={`/game/${item.slug}`}>
           <a title={item.title}>
-            <Image appid={`${item.title}`} alt={item.title} />
+            <Image alt={item.title} />
             <h2 className="list-item-title">
               <span>{item.title}</span>
             </h2>
