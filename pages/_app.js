@@ -59,6 +59,7 @@ function MyApp({ Component, pageProps }) {
       />
 
       <Head>
+        <meta name="google" content="notranslate" />
         <link
           rel="icon"
           href={`${Router.basePath}/favicon.ico`}
