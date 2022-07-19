@@ -11,7 +11,7 @@ export default function Home({ data, categories }) {
   return (
     <Layout navItems={categories} title={`Home`}>
       <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
             <section key={item.category.slug}>
               <header className="section-title my-3 mx-4 flex gap-2">
@@ -19,7 +19,11 @@ export default function Home({ data, categories }) {
               </header>
               <ul className="mx-4 grid grid-cols-3 gap-4">
                 {item.data.map((item) => (
-                  <ListItem item={item} key={item.id} />
+                  <ListItem
+                    item={item}
+                    key={item.id}
+                    lazy={index > 2 ? true : false}
+                  />
                 ))}
               </ul>
               {item.total > 6 ? (

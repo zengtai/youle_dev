@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "./Image";
 
-export default function ListItem({ item, index }) {
+export default function ListItem({ item, index, lazy }) {
   function handleIndex(index) {
     switch (index) {
       // case 2:
@@ -22,7 +22,7 @@ export default function ListItem({ item, index }) {
       <li className={`${handleIndex(index)}`}>
         <Link href={`/game/${item.slug}`}>
           <a title={item.title}>
-            <Image alt={item.title} lazy />
+            <Image alt={item.title} lazy={lazy} />
             <h2 className="list-item-title">
               <span>{item.title}</span>
             </h2>
