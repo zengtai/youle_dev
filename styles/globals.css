@@ -167,3 +167,7 @@ main {
     width: 250px;
   }
 }
+
+.adsbygoogle {
+  @apply w-full;
+}
