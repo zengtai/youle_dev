@@ -16,7 +16,7 @@ export default function Category({ slugs, category, categories }) {
     <Layout navItems={categories} title={`${category} Games`}>
       <div className="game-category container mx-auto">
         <Banner
-          className={`banner mt-14 md:mt-0`}
+          className={`banner`}
           style={{ display: "block" }}
           slot={ADS_SLOT_ID.category}
           responsive="false"
