@@ -3,7 +3,11 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
+import { ADS_SLOT_ID } from "../../lib/constants";
+
 import Detail from "../../components/Detail";
+
+import Banner from "../../components/Banner";
 
 export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`data`, data);
@@ -20,7 +24,12 @@ export default function Game({ data, relatedSlugs, categories }) {
           <div className="flex flex-col xl:my-6 xl:flex-row">
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
-                <div className="banner mx-auto mt-2 mb-4 h-[100px] w-[300px] bg-sky-500 xl:h-[90px] xl:w-[728px]"></div>
+                <Banner
+                  className={`banner xl:mb-4`}
+                  style={{ display: "block" }}
+                  slot={ADS_SLOT_ID.detail}
+                  responsive="false"
+                />
                 <Detail data={data} />
               </div>
               <header className="section-title m-4 xl:sr-only">
@@ -37,14 +46,24 @@ export default function Game({ data, relatedSlugs, categories }) {
                 items={related.slice(18, 30)}
                 className={`mx-4 mb-4 grid grid-cols-3 gap-4 xl:mx-6 xl:my-4 xl:grid-cols-3`}
               />
-              <div className="banner mx-4 h-[100px] w-[300px] bg-sky-500 xl:h-[250px] xl:w-[250px]"></div>
+              <Banner
+                className={`banner square`}
+                style={{ display: "block" }}
+                slot={ADS_SLOT_ID.detail}
+                responsive="false"
+              />
             </div>
             <div className="mb-4 hidden items-center xl:order-3 xl:flex xl:basis-1/3 xl:flex-col xl:items-end xl:gap-4">
               <List
                 items={related.slice(30, 42)}
                 className={`mx-4 mb-4 grid grid-cols-3 gap-4 xl:mx-6 xl:my-4 xl:grid-cols-3`}
               />
-              <div className="banner mx-4 h-[100px] w-[300px] bg-sky-500 xl:h-[250px] xl:w-[250px]"></div>
+              <Banner
+                className={`banner square`}
+                style={{ display: "block" }}
+                slot={ADS_SLOT_ID.detail}
+                responsive="false"
+              />
             </div>
           </div>
         </div>

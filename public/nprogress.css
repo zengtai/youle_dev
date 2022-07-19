@@ -35,9 +35,9 @@
   display: block;
   position: fixed;
   z-index: 1031;
-  top: 10px;
+  top: 15px;
   left: 50%;
-  margin-left: -9px;
+  transform: translateX(-50%);
 }
 
 #nprogress .spinner-icon {
@@ -56,14 +56,17 @@
 
 @media (min-width: 768px) {
   #nprogress .spinner {
-    top: 2rem;
-    left: 1.5rem;
-    margin-left: auto;
+    top: 50%;
+    background: #00000050;
+    padding: 20px;
+    border-radius: 10px;
   }
   #nprogress .spinner-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-width: 4px;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
   }
 }
 

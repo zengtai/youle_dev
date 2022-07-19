@@ -130,3 +130,40 @@ main {
 .list-item {
   @apply overflow-hidden rounded-2xl shadow-lg shadow-black/20;
 }
+
+@media (min-width: 300px) {
+  .AdContainer {
+    width: 300px;
+  }
+  .banner {
+    height: 100px;
+  }
+  .banner_sm {
+    height: 50px;
+  }
+  .rectangle {
+    height: 200px;
+  }
+}
+@media (min-width: 468px) {
+  .AdContainer {
+    width: 468px;
+    height: 60px;
+  }
+}
+@media (min-width: 728px) {
+  .AdContainer {
+    width: 728px;
+    height: 90px;
+  }
+}
+@media (min-width: 970px) {
+  .banner_lg {
+    width: 970px;
+    height: 250px;
+  }
+  .square {
+    height: 250px;
+    width: 250px;
+  }
+}
