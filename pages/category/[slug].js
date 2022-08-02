@@ -1,10 +1,10 @@
-import { getListDataBySlugs, getLocalData } from "../../lib/api";
+import Breadcrumb from "../../components/Breadcrumb";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
-import Breadcrumb from "../../components/Breadcrumb";
+import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
-import { ADS_SLOT_ID } from "../../lib/constants";
 import Banner from "../../components/Banner";
+import { ADS_SLOT_ID } from "../../lib/constants";
 
 export default function Category({ slugs, category, categories }) {
   // console.log(`category`, category);
@@ -19,7 +19,7 @@ export default function Category({ slugs, category, categories }) {
           className={`banner`}
           style={{ display: "block" }}
           slot={ADS_SLOT_ID.category}
-          responsive="false"
+          responsive="true"
         />
 
         <Breadcrumb item={category} />

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
-import { getLocalData } from "../lib/api";
 import ListItem from "../components/ListItem";
+import { getLocalData } from "../lib/api";
 
-import { ADS_SLOT_ID } from "../lib/constants";
 import Banner from "../components/Banner";
+import { ADS_SLOT_ID } from "../lib/constants";
 
 export default function Home({ data, categories }) {
   console.log(`data`, data);

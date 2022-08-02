@@ -10,9 +10,9 @@ import * as gtag from "../lib/gtag";
 import { getLocalData } from "../lib/api";
 import { GA_ID } from "../lib/constants";
 
-import "../styles/globals.css";
-import "../public/nprogress.css";
 import Head from "next/head";
+import "../public/nprogress.css";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const Router = useRouter();

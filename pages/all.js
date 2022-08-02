@@ -1,27 +1,11 @@
-import Head from "next/head";
 import Layout from "../components/Layout";
-import { getListDataBySlugs, getLocalData } from "../lib/api";
 import List from "../components/List";
+import { getListDataBySlugs, getLocalData } from "../lib/api";
 
 export default function AllGames({ slugs, categories }) {
   let data = getListDataBySlugs(slugs);
   return (
     <>
-      <Head>
-        <link
-          rel="icon"
-          href="/favicon.ico"
-          sizes="16x16"
-          type="image/x-icon"
-        />
-        <link
-          rel="icon"
-          href="/favicon.png"
-          sizes="16x16 32x32 64x64"
-          type="image/png"
-        />
-        <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
-      </Head>
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
           <section className="my-8">
