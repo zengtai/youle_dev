@@ -7,7 +7,7 @@ import Banner from "../components/Banner";
 import { ADS_SLOT_ID } from "../lib/constants";
 
 export default function Home({ data, categories }) {
-  console.log(`data`, data);
+  // console.log(`data`, data);
   // let tmpData = getListDataBySlugs(slugs);
 
   return (
