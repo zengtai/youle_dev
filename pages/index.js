@@ -5,9 +5,10 @@ import { getLocalData } from "../lib/api";
 
 import Banner from "../components/Banner";
 import { ADS_SLOT_ID } from "../lib/constants";
+import { Fragment } from "react";
 
 export default function Home({ data, categories }) {
-  console.log(`data`, data);
+  // console.log(`data`, data);
   // let tmpData = getListDataBySlugs(slugs);
 
   return (
@@ -17,8 +18,8 @@ export default function Home({ data, categories }) {
           .sort((a, b) => (a.total < b.total ? 1 : -1))
           .map((item, index) => {
             return (
-              <>
-                <section key={item.category.slug}>
+              <Fragment key={item.category.slug}>
+                <section>
                   <header className="section-title my-3 mx-4 flex gap-2">
                     <h1 className="font-bold">{`${item.category.name} Games`}</h1>
                   </header>
@@ -43,13 +44,12 @@ export default function Home({ data, categories }) {
                 </section>
                 {index < 3 ? (
                   <Banner
-                    className={`banner rectangle mt-4 xl:hidden`}
+                    className={`banner mt-4 xl:hidden`}
                     style={{ display: "block" }}
                     slot={ADS_SLOT_ID.home}
-                    responsive="false"
                   />
                 ) : null}
-              </>
+              </Fragment>
             );
           })}
       </div>
