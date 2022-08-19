@@ -43,14 +43,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        <link
-          rel="icon"
-          href={`${Router.basePath}/favicon.ico`}
-          sizes="16x16"
-          type="image/x-icon"
-        />
-      </Head>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
