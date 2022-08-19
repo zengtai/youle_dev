@@ -19,7 +19,9 @@ export default function Category({ slugs, category, categories }) {
           className={`banner`}
           style={{ display: "block" }}
           slot={ADS_SLOT_ID.category}
-          responsive="true"
+          responsive="false"
+          tag={category}
+          key={Math.random()}
         />
 
         <Breadcrumb item={category} />

@@ -14,6 +14,10 @@ import Head from "next/head";
 import "../public/nprogress.css";
 import "../styles/globals.css";
 
+export function reportWebVitals(metric) {
+  console.log(metric);
+}
+
 function MyApp({ Component, pageProps }) {
   const Router = useRouter();
   useEffect(() => {
@@ -39,6 +43,14 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <link
+          rel="icon"
+          href={`${Router.basePath}/favicon.ico`}
+          sizes="16x16"
+          type="image/x-icon"
+        />
+      </Head>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}

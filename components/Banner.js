@@ -11,15 +11,16 @@ const Banner = ({
   responsive,
   layoutKey,
   auto,
+  tag,
 }) => {
   useEffect(() => {
     try {
-      const adsbygoogle = window.adsbygoogle || [];
-      adsbygoogle.push({});
+      (window.adsbygoogle || []).push({});
+      console.log(`Tag: ${tag}, Id: ${slot}`);
     } catch (e) {
-      console.error(e);
+      console.error(e.message);
     }
-  }, []);
+  });
 
   return auto ? (
     <div className={`${className} ad-container`}>
@@ -32,6 +33,7 @@ const Banner = ({
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
+        data-adtest="on"
       />
     </div>
   ) : (
@@ -45,6 +47,7 @@ const Banner = ({
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
+        data-adtest="on"
       />
     </div>
   );

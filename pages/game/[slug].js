@@ -29,6 +29,8 @@ export default function Game({ data, relatedSlugs, categories }) {
                   style={{ display: "block" }}
                   slot={ADS_SLOT_ID.detail}
                   responsive="false"
+                  tag={data.title}
+                  key={Math.random()}
                 />
                 <Detail data={data} />
               </div>
@@ -51,6 +53,8 @@ export default function Game({ data, relatedSlugs, categories }) {
                 style={{ display: "block" }}
                 slot={ADS_SLOT_ID.detail}
                 responsive="false"
+                tag={data.title}
+                key={Math.random()}
               />
             </div>
             <div className="mb-4 hidden items-center xl:order-3 xl:flex xl:basis-1/3 xl:flex-col xl:items-end xl:gap-4">
@@ -63,6 +67,8 @@ export default function Game({ data, relatedSlugs, categories }) {
                 style={{ display: "block" }}
                 slot={ADS_SLOT_ID.detail}
                 responsive="false"
+                tag={data.title}
+                key={Math.random()}
               />
             </div>
           </div>

@@ -3,13 +3,23 @@
 // const customLoader = ({ src }) => {
 //   return src;
 // };
+import { useAmp } from "next/amp";
 
 export default function Image({ alt, width, height, lazy }) {
   // return <NextImage {...props} loader={customLoader} unoptimized="true" />;
   // return <img {...props} />;
+  const isAmp = useAmp();
 
   let srcId = alt.replace(/\s/g, "");
-  return (
+  return isAmp ? (
+    <amp-img
+      width={width ? width : "100px"}
+      height={height ? height : "100px"}
+      src={`https://cdn.iwantalipstick.com/gameicon2/png/${srcId}.png`}
+      alt={alt}
+      layout="responsive"
+    />
+  ) : (
     <picture className="block overflow-hidden rounded-xl shadow-lg">
       <source
         type="image/avif"
