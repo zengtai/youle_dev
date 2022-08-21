@@ -28,7 +28,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
-  basePath: "/webs/youle",
+  // basePath: "/webs/youle",
   // distDir: "build",
   // generateBuildId: async () => {
   //   // You can, for example, get the latest git commit hash here
