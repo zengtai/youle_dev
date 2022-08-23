@@ -6,7 +6,7 @@ import ListItem from "../components/ListItem";
 import { getLocalData } from "../lib/api";
 import { ADS_SLOT_ID } from "../lib/constants";
 
-export const config = { amp: "hybrid" };
+// export const config = { amp: "hybrid" };
 
 export default function Home({ data, categories }) {
   // console.log(`data`, data);
