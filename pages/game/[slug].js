@@ -29,10 +29,17 @@ export default function Game({ data, relatedSlugs, categories }) {
                   style={{ display: "block" }}
                   slot={ADS_SLOT_ID.detail}
                   responsive="false"
-                  tag={data.title}
+                  tag={`${data.title}-ad-1`}
                   key={Math.random()}
                 />
                 <Detail data={data} />
+                <Banner
+                  className={`mt-6`}
+                  slot={ADS_SLOT_ID.detail}
+                  auto
+                  tag={`${data.title}-ad-2`}
+                  key={Math.random()}
+                />
               </div>
               <header className="section-title m-4 xl:sr-only">
                 <h2 className="font-bold">You May Also Like</h2>
@@ -53,7 +60,7 @@ export default function Game({ data, relatedSlugs, categories }) {
                 style={{ display: "block" }}
                 slot={ADS_SLOT_ID.detail}
                 responsive="false"
-                tag={data.title}
+                tag={`${data.title}-ad-3`}
                 key={Math.random()}
               />
             </div>
@@ -67,7 +74,7 @@ export default function Game({ data, relatedSlugs, categories }) {
                 style={{ display: "block" }}
                 slot={ADS_SLOT_ID.detail}
                 responsive="false"
-                tag={data.title}
+                tag={`${data.title}-ad-4`}
                 key={Math.random()}
               />
             </div>

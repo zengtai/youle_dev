@@ -20,20 +20,24 @@ const Banner = ({
     } catch (e) {
       console.error(e.message);
     }
-  });
+  }, [tag, slot]);
 
   return auto ? (
-    <div className={`${className} ad-container`}>
+    <div {...(className ? { className: `${className}` } : null)}>
       <ins
         className={`adsbygoogle`}
-        style={style}
+        style={
+          style ? style : { display: `block`, backgroundColor: `#00000010` }
+        }
         data-ad-layout={layout}
-        data-ad-format={format}
+        data-ad-format={format ? format : `auto`}
         data-ad-client={client}
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
-        data-full-width-responsive={responsive}
-        data-adtest="on"
+        data-full-width-responsive={responsive ? responsive : `true`}
+        {...(`${process.env.NODE_ENV}` === "development"
+          ? { "data-adtest": "on" }
+          : null)}
       />
     </div>
   ) : (
@@ -47,7 +51,9 @@ const Banner = ({
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
         data-full-width-responsive={responsive}
-        data-adtest="on"
+        {...(`${process.env.NODE_ENV}` === "development"
+          ? { "data-adtest": "on" }
+          : null)}
       />
     </div>
   );
