@@ -15,14 +15,22 @@ export default function Category({ slugs, category, categories }) {
   return (
     <Layout navItems={categories} title={`${category} Games`}>
       <div className="game-category container mx-auto">
-        <Banner
-          className={`banner`}
-          style={{ display: "block" }}
+        {/* <Banner
+          className={`text-center`}
+          auto
           slot={ADS_SLOT_ID.category}
-          responsive="true"
-        />
+          style={{ display: "inline-block" }}
+          key={Math.random()}
+        /> */}
 
         <Breadcrumb item={category} />
+        <Banner
+          className={`banner ad-container`}
+          style={{ display: "block", height: "100%" }}
+          slot={ADS_SLOT_ID.category}
+          responsive="false"
+          key={Math.random()}
+        />
         <section className="my-4">
           <header className="section-title">
             <h1 className="text-center font-bold">{`${category} Games`}</h1>

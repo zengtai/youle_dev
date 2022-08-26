@@ -14,38 +14,33 @@ const Banner = ({
 }) => {
   useEffect(() => {
     try {
-      const adsbygoogle = window.adsbygoogle || [];
+      let adsbygoogle = window.adsbygoogle || [];
       adsbygoogle.push({});
     } catch (e) {
       console.error(e);
     }
   }, []);
 
-  return auto ? (
-    <div className={`${className} ad-container`}>
-      <ins
-        className={`adsbygoogle`}
-        style={style}
-        data-ad-layout={layout}
-        data-ad-format={format}
-        data-ad-client={client}
-        data-ad-slot={slot}
-        data-ad-layout-key={layoutKey}
-        data-full-width-responsive={responsive}
-      />
-    </div>
-  ) : (
-    <div className={`${className} AdContainer ad-container`}>
-      <ins
-        className={`adsbygoogle`}
-        style={style}
-        data-ad-layout={layout}
-        data-ad-format={format}
-        data-ad-client={client}
-        data-ad-slot={slot}
-        data-ad-layout-key={layoutKey}
-        data-full-width-responsive={responsive}
-      />
+  return (
+    <div className="my-4">
+      <div className="text-center text-xs uppercase opacity-50">
+        Advertisement
+      </div>
+      <div className={className}>
+        <ins
+          className={`adsbygoogle`}
+          style={style}
+          data-ad-layout={layout}
+          data-ad-format={auto ? `auto` : format}
+          data-ad-client={client}
+          data-ad-slot={slot}
+          data-ad-layout-key={layoutKey}
+          data-full-width-responsive={auto ? `true` : responsive}
+          {...(process.env.NODE_ENV === `development`
+            ? { "data-adtest": "on" }
+            : null)}
+        />
+      </div>
     </div>
   );
 };

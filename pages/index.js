@@ -42,10 +42,14 @@ export default function Home({ data, categories }) {
                     </Link>
                   ) : null}
                 </section>
-                {index < 3 ? (
+                {index == 0 || index == 2 ? (
                   <Banner
-                    className={`banner rectangle mt-4 xl:hidden`}
-                    style={{ display: "block" }}
+                    className={`text-center`}
+                    style={{
+                      display: "inline-block",
+                      width: "300px",
+                      height: "250px",
+                    }}
                     slot={ADS_SLOT_ID.home}
                     responsive="false"
                   />
