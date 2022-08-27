@@ -16,34 +16,24 @@ const Banner = ({
     try {
       (window.adsbygoogle || []).push({});
     } catch (e) {
-      console.error(e.message);
+      console.error(`Adsense Error: `, e.message);
     }
   }, []);
 
-  return auto ? (
-    <div className={`${className} ad-container`}>
+  return (
+    <div className={`${auto ? `` : `AdContainer`} ${className} ad-container`}>
       <ins
         className={`adsbygoogle`}
         style={style}
         data-ad-layout={layout}
-        data-ad-format={format}
+        data-ad-format={auto ? `auto` : format}
         data-ad-client={client}
         data-ad-slot={slot}
         data-ad-layout-key={layoutKey}
-        data-full-width-responsive={responsive}
-      />
-    </div>
-  ) : (
-    <div className={`${className} AdContainer ad-container`}>
-      <ins
-        className={`adsbygoogle`}
-        style={style}
-        data-ad-layout={layout}
-        data-ad-format={format}
-        data-ad-client={client}
-        data-ad-slot={slot}
-        data-ad-layout-key={layoutKey}
-        data-full-width-responsive={responsive}
+        data-full-width-responsive={auto ? `true` : responsive}
+        {...(process.env.NODE_ENV === `development`
+          ? { "data-adtest": "on" }
+          : null)}
       />
     </div>
   );
