@@ -31,7 +31,7 @@ export default function Category({ slugs, category, categories }) {
           responsive="false"
           key={Math.random()}
         />
-        <section className="my-4">
+        <section className="mt-4 mb-8">
           <header className="section-title">
             <h1 className="text-center font-bold">{`${category} Games`}</h1>
           </header>

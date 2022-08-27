@@ -20,7 +20,7 @@ export default function AllGames({ slugs, categories }) {
             </span>
           </header> */}
             <Banner
-              className={`banner ad-container`}
+              className={`banner banner_fw ad-container mb-8`}
               style={{ display: "block", height: "100%" }}
               slot={ADS_SLOT_ID.category}
               responsive="false"

@@ -35,6 +35,7 @@ export default function Game({ data, relatedSlugs, categories }) {
                   // style={{ width: "100%", height: "100%" }}
                   slot={ADS_SLOT_ID.detail}
                   responsive="false"
+                  key={Math.random()}
                 />
               </div>
               <header className="section-title m-4 xl:sr-only">
@@ -56,6 +57,7 @@ export default function Game({ data, relatedSlugs, categories }) {
                 style={{ display: "block", height: "100%" }}
                 slot={ADS_SLOT_ID.detail}
                 responsive="false"
+                key={Math.random()}
               />
             </div>
             <div className="mb-4 hidden items-center xl:order-3 xl:flex xl:basis-1/3 xl:flex-col xl:items-end xl:gap-4">
@@ -64,6 +66,7 @@ export default function Game({ data, relatedSlugs, categories }) {
                 style={{ display: "block", height: "100%" }}
                 slot={ADS_SLOT_ID.detail}
                 responsive="false"
+                key={Math.random()}
               />
               <List
                 items={related.slice(30, 42)}
