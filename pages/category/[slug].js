@@ -25,7 +25,7 @@ export default function Category({ slugs, category, categories }) {
 
         <Breadcrumb item={category} />
         <Banner
-          className={`banner ad-container`}
+          className={`banner banner_fw ad-container`}
           style={{ display: "block", height: "100%" }}
           slot={ADS_SLOT_ID.category}
           responsive="false"

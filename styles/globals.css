@@ -173,7 +173,7 @@ main {
   }
 }
 @media (min-width: 970px) {
-  .banner {
+  .banner_fw {
     width: 970px;
   }
   .banner_lg {
