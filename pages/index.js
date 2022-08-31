@@ -3,8 +3,8 @@ import Layout from "../components/Layout";
 import ListItem from "../components/ListItem";
 import { getLocalData } from "../lib/api";
 
-import Banner from "../components/Banner";
-import { ADS_SLOT_ID } from "../lib/constants";
+// import Banner from "../components/Banner";
+// import { ADS_SLOT_ID } from "../lib/constants";
 import { Fragment } from "react";
 
 export default function Home({ data, categories }) {
@@ -42,7 +42,7 @@ export default function Home({ data, categories }) {
                     </Link>
                   ) : null}
                 </section>
-                {index == 0 || index == 2 ? (
+                {/* {index == 0 || index == 2 ? (
                   <Banner
                     className={`text-center`}
                     style={{
@@ -53,7 +53,7 @@ export default function Home({ data, categories }) {
                     slot={ADS_SLOT_ID.home}
                     responsive="false"
                   />
-                ) : null}
+                ) : null} */}
               </Fragment>
             );
           })}

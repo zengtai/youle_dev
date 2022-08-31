@@ -3,8 +3,8 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
-import Banner from "../../components/Banner";
-import { ADS_SLOT_ID } from "../../lib/constants";
+// import Banner from "../../components/Banner";
+// import { ADS_SLOT_ID } from "../../lib/constants";
 
 export default function Category({ slugs, category, categories }) {
   // console.log(`category`, category);
@@ -24,13 +24,13 @@ export default function Category({ slugs, category, categories }) {
         /> */}
 
         <Breadcrumb item={category} />
-        <Banner
+        {/* <Banner
           className={`banner banner_fw ad-container`}
           style={{ display: "block", height: "100%" }}
           slot={ADS_SLOT_ID.category}
           responsive="false"
           key={Math.random()}
-        />
+        /> */}
         <section className="mt-4 mb-8">
           <header className="section-title">
             <h1 className="text-center font-bold">{`${category} Games`}</h1>

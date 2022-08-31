@@ -3,11 +3,11 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
-import { ADS_SLOT_ID } from "../../lib/constants";
+// import { ADS_SLOT_ID } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
 
-import Banner from "../../components/Banner";
+// import Banner from "../../components/Banner";
 
 export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`data`, data);
@@ -25,7 +25,7 @@ export default function Game({ data, relatedSlugs, categories }) {
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
                 <Detail data={data} />
-                <Banner
+                {/* <Banner
                   className={`banner ad-container text-center`}
                   style={{
                     display: "inline-block",
@@ -36,7 +36,7 @@ export default function Game({ data, relatedSlugs, categories }) {
                   slot={ADS_SLOT_ID.detail}
                   responsive="false"
                   key={Math.random()}
-                />
+                /> */}
               </div>
               <header className="section-title m-4 xl:sr-only">
                 <h2 className="font-bold">You May Also Like</h2>
@@ -52,22 +52,22 @@ export default function Game({ data, relatedSlugs, categories }) {
                 items={related.slice(18, 30)}
                 className={`mx-4 mb-4 grid grid-cols-3 gap-4 xl:mx-6 xl:my-4 xl:grid-cols-3`}
               />
-              <Banner
+              {/* <Banner
                 className={`square ad-container`}
                 style={{ display: "block", height: "100%" }}
                 slot={ADS_SLOT_ID.detail}
                 responsive="false"
                 key={Math.random()}
-              />
+              /> */}
             </div>
             <div className="mb-4 hidden items-center xl:order-3 xl:flex xl:basis-1/3 xl:flex-col xl:items-end xl:gap-4">
-              <Banner
+              {/* <Banner
                 className={`square ad-container`}
                 style={{ display: "block", height: "100%" }}
                 slot={ADS_SLOT_ID.detail}
                 responsive="false"
                 key={Math.random()}
-              />
+              /> */}
               <List
                 items={related.slice(30, 42)}
                 className={`mx-4 mb-4 grid grid-cols-3 gap-4 xl:mx-6 xl:my-4 xl:grid-cols-3`}
