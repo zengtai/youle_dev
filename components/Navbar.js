@@ -12,6 +12,12 @@ import {
   SimulationIcon,
   SportsIcon,
   StrategyIcon,
+  RacingIcon,
+  ArcadeIcon,
+  AdventureIcon,
+  IoIcon,
+  GirlIcon,
+  Match3Icon,
 } from "./Icons";
 import { useState } from "react";
 
@@ -40,6 +46,18 @@ export default function Navbar({ items }) {
         return SimulationIcon(className);
       case `Strategy`:
         return StrategyIcon(className);
+      case `Racing`:
+        return RacingIcon(className);
+      case `Arcade`:
+        return ArcadeIcon(className);
+      case `Adventure`:
+        return AdventureIcon(className);
+      case `IO`:
+        return IoIcon(className);
+      case `Girl`:
+        return GirlIcon(className);
+      case `Match 3`:
+        return Match3Icon(className);
       default:
         return ActionIcon(className);
     }

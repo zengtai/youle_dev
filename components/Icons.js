@@ -225,3 +225,177 @@ export const StrategyIcon = (className) => {
     </svg>
   );
 };
+
+export const ArcadeIcon = (className) => {
+  return (
+    <svg
+      className={className ? `h-5 w-5 ${className}` : `h-5 w-5`}
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <g clipPath="url(#clip0_1589_29)">
+        <path
+          fill="#17D26D"
+          fillRule="evenodd"
+          d="M11.285 7.495A3.859 3.859 0 0010 0a3.857 3.857 0 00-1.286 7.494v4.72a1.286 1.286 0 102.571 0v-4.72zM8.071 8.65L0 12.57v1.786l10 5.526 10-5.526v-1.786l-8.072-3.92v3.563a1.928 1.928 0 11-3.857 0V8.65zm3.266-5.712a.91.91 0 100-1.818.91.91 0 000 1.818z"
+          clipRule="evenodd"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_1589_29">
+          <path fill="#fff" d="M0 0H20V20H0z"></path>
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export const AdventureIcon = (className) => {
+  return (
+    <svg
+      className={className ? `h-5 w-5 ${className}` : `h-5 w-5`}
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <g clipPath="url(#clip0_1589_60)">
+        <path
+          fill="#B658FF"
+          fillRule="evenodd"
+          d="M20 10c0 5.523-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0s10 4.477 10 10zm-10 7.778a7.778 7.778 0 100-15.556 7.778 7.778 0 000 15.556zm0 1.11a8.889 8.889 0 100-17.777 8.889 8.889 0 000 17.778zm4.713-13.603l-.004.01.006-.002-2.75 6.67-6.679 2.75 2.75-6.677.002-.001 6.675-2.75zm-3.548 5.877L8.838 8.835l-.002.001-1.63 3.958 3.959-1.63v-.002z"
+          clipRule="evenodd"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_1589_60">
+          <path fill="#fff" d="M0 0H20V20H0z"></path>
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export const RacingIcon = (className) => {
+  return (
+    <svg
+      className={className ? `h-5 w-5 ${className}` : `h-5 w-5`}
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <g clipPath="url(#clip0_2125_966)">
+        <path
+          fill="#3DA2FF"
+          d="M7.212 4.896V8.69c1.287.076 2.613.417 3.9.759V5.655c-1.287-.342-2.613-.683-3.9-.76zm0 0V8.69c1.287.076 2.613.417 3.9.759V5.655c-1.287-.342-2.613-.683-3.9-.76zM18.402.91c-.858.455-1.755.645-2.769.645-1.364 0-2.728-.38-4.21-.759C9.863.417 8.265 0 6.628 0 5.224 0 3.977.304 2.807.91l-.585.304v-.151C2.222.493 1.715 0 1.092 0 .507 0 0 .493 0 1.063v17.836c0 .608.507 1.063 1.092 1.063.623 0 1.091-.493 1.091-1.063v-3.833l1.638-.873c.857-.455 1.754-.645 2.768-.645 1.364 0 2.729.38 4.21.76 1.56.417 3.158.834 4.796.834 1.403 0 2.65-.303 3.82-.91l.585-.304V.076L18.402.91zm.506 4.744c-1.286.683-2.612.873-3.898.759v3.795c1.286.076 2.612-.076 3.898-.76v3.796a6.944 6.944 0 01-3.275.797c-.194 0-.39 0-.623-.038v-3.795c-1.287-.076-2.612-.418-3.899-.76v3.796c-1.286-.342-2.612-.683-3.899-.76h-.039.04V8.692c-1.287-.076-2.613.076-3.9.759V5.655c1.287-.683 2.613-.873 3.9-.76V1.102c1.286.075 2.612.417 3.898.759v3.795c1.287.341 2.612.683 3.899.759V2.619h.623a6.944 6.944 0 003.275-.797v3.833zm-11.696-.76v3.796c1.287.076 2.613.417 3.9.759V5.655c-1.287-.342-2.613-.683-3.9-.76zm0 0v3.796c1.287.076 2.613.417 3.9.759V5.655c-1.287-.342-2.613-.683-3.9-.76zm0 0v3.796c1.287.076 2.613.417 3.9.759V5.655c-1.287-.342-2.613-.683-3.9-.76z"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_2125_966">
+          <path fill="#fff" d="M0 0H20V20H0z"></path>
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
+export const IoIcon = (className) => {
+  return (
+    <svg
+      className={className ? `h-5 w-5 ${className}` : `h-5 w-5`}
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <circle cx="10" cy="3" r="2" fill="#27F7D1"></circle>
+      <path
+        fill="#27F7D1"
+        d="M8 9h2v2a1 1 0 11-2 0V9zM10 9h2v2a1 1 0 11-2 0V9zM7 7a2 2 0 012-2h2a2 2 0 012 2v2H7V7z"
+      ></path>
+      <circle cx="4" cy="10" r="2" fill="#27F7D1"></circle>
+      <path
+        fill="#27F7D1"
+        d="M2 16h2v2a1 1 0 11-2 0v-2zM4 16h2v2a1 1 0 11-2 0v-2zM1 14a2 2 0 012-2h2a2 2 0 012 2v2H1v-2z"
+      ></path>
+      <circle cx="16" cy="10" r="2" fill="#27F7D1"></circle>
+      <path
+        fill="#27F7D1"
+        d="M14 16h2v2a1 1 0 11-2 0v-2zM16 16h2v2a1 1 0 11-2 0v-2zM13 14a2 2 0 012-2h2a2 2 0 012 2v2h-6v-2z"
+      ></path>
+    </svg>
+  );
+};
+
+export const GirlIcon = (className) => {
+  return (
+    <svg
+      className={className ? `h-5 w-5 ${className}` : `h-5 w-5`}
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <path
+        fill="#FF58BC"
+        fillRule="evenodd"
+        d="M10 1a9 9 0 00-9 9v4h3.255a7.031 7.031 0 002.569 2.24A3 3 0 005 19h10a3 3 0 00-1.824-2.76 7.031 7.031 0 002.57-2.24H19v-4a9 9 0 00-9-9zm6 9a6 6 0 11-12 0 6 6 0 0112 0zm-9 1a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0z"
+        clipRule="evenodd"
+      ></path>
+      <ellipse
+        cx="7.464"
+        cy="4.732"
+        fill="#FF58BC"
+        rx="4"
+        ry="2"
+        transform="rotate(-30 7.464 4.732)"
+      ></ellipse>
+      <ellipse
+        cx="13.598"
+        cy="5.232"
+        fill="#FF58BC"
+        rx="3"
+        ry="2"
+        transform="rotate(30 13.598 5.232)"
+      ></ellipse>
+    </svg>
+  );
+};
+
+export const Match3Icon = (className) => {
+  return (
+    <svg
+      className={className ? `h-5 w-5 ${className}` : `h-5 w-5`}
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <path
+        fill="#FF4E4E"
+        fillRule="evenodd"
+        d="M7 1a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H8a1 1 0 01-1-1V1zm1 0h4v4H8V1z"
+        clipRule="evenodd"
+      ></path>
+      <path
+        fill="#FF4E4E"
+        d="M1 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1v-1H4.732a2 2 0 110-2H6V8a1 1 0 00-1-1H1zM7 12v-1h1.268a2 2 0 003.464 0H13v1a1 1 0 01-1 1H8a1 1 0 01-1-1zM10 8a2 2 0 011.732 1H13V8a1 1 0 00-1-1H8a1 1 0 00-1 1v1h1.268A2 2 0 0110 8zM14 12v-1h1.268A2 2 0 0019 10a2 2 0 00-3.732-1H14V8a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1z"
+      ></path>
+      <path
+        fill="#FF4E4E"
+        fillRule="evenodd"
+        d="M7 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H8a1 1 0 01-1-1v-4zm1 0h4v4H8v-4z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+};

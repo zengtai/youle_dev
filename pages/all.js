@@ -12,7 +12,7 @@ export default function AllGames({ slugs, categories }) {
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
           <Breadcrumb item={`All`} />
-          <section className="mb-8">
+          <section className="my-8">
             {/* <header className="my-3 mx-4 flex items-start gap-2">
             <h1 className="font-bold">{`All Games`}</h1>
             <span className="rounded-lg bg-slate-200 px-1 text-sm">
