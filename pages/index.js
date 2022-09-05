@@ -15,6 +15,7 @@ export default function Home({ data, categories }) {
     <Layout navItems={categories} title={`Home`}>
       <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
         {data
+          .slice()
           .sort((a, b) => (a.total < b.total ? 1 : -1))
           .map((item, index) => {
             return (
