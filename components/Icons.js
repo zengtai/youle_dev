@@ -377,23 +377,25 @@ export const Match3Icon = (className) => {
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
-      fill="none"
+      fill="#FF4008"
       viewBox="0 0 20 20"
     >
+      <path d="M7 0h6v6H7V0zM7 10a3 3 0 116 0 3 3 0 01-6 0z"></path>
       <path
-        fill="#FF4E4E"
         fillRule="evenodd"
-        d="M7 1a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H8a1 1 0 01-1-1V1zm1 0h4v4H8V1z"
+        d="M9 17a1 1 0 102 0 1 1 0 00-2 0zm1-3a3 3 0 100 6 3 3 0 000-6zM2 3a1 1 0 102 0 1 1 0 00-2 0zm1-3a3 3 0 100 6 3 3 0 000-6z"
         clipRule="evenodd"
       ></path>
+      <path d="M0 10a3 3 0 116 0 3 3 0 01-6 0zM0 14h6v6H0v-6z"></path>
       <path
-        fill="#FF4E4E"
-        d="M1 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1v-1H4.732a2 2 0 110-2H6V8a1 1 0 00-1-1H1zM7 12v-1h1.268a2 2 0 003.464 0H13v1a1 1 0 01-1 1H8a1 1 0 01-1-1zM10 8a2 2 0 011.732 1H13V8a1 1 0 00-1-1H8a1 1 0 00-1 1v1h1.268A2 2 0 0110 8zM14 12v-1h1.268A2 2 0 0019 10a2 2 0 00-3.732-1H14V8a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1z"
-      ></path>
-      <path
-        fill="#FF4E4E"
         fillRule="evenodd"
-        d="M7 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H8a1 1 0 01-1-1v-4zm1 0h4v4H8v-4z"
+        d="M18 2h-2v2h2V2zm-4-2v6h6V0h-6z"
+        clipRule="evenodd"
+      ></path>
+      <path d="M14 10a3 3 0 116 0 3 3 0 01-6 0z"></path>
+      <path
+        fillRule="evenodd"
+        d="M18 16h-2v2h2v-2zm-4-2v6h6v-6h-6z"
         clipRule="evenodd"
       ></path>
     </svg>
