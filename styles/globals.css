@@ -60,7 +60,7 @@ main {
 }
 
 .section-title {
-  @apply bg-gradient-to-r from-green-300 to-cyan-600 bg-clip-text text-transparent border-l-4 pl-3 border-l-yellow-300 leading-5 my-4;
+  @apply bg-gradient-to-r from-green-300 to-cyan-600 bg-clip-text text-transparent;
 }
 
 .more-link {
@@ -87,6 +87,10 @@ main {
 
 .game-category .section-title {
   @apply my-4 mx-4 text-2xl;
+}
+
+.home .section-title {
+  @apply border-l-4 pl-3 border-l-yellow-300 leading-5 my-4;
 }
 
 .home section {
