@@ -59,7 +59,7 @@ main {
   @apply mx-4 grid grid-cols-3 gap-4 xl:grid-cols-12;
 }
 
-.section-title {
+.section-title h1 {
   @apply bg-gradient-to-r from-green-300 to-cyan-600 bg-clip-text text-transparent;
 }
 
@@ -90,7 +90,7 @@ main {
 }
 
 .home .section-title {
-  @apply border-l-4 pl-3 border-l-yellow-300 leading-5 my-4;
+  @apply my-4 border-l-4 border-l-yellow-300 pl-3 leading-5;
 }
 
 .home section {
@@ -118,11 +118,11 @@ main {
 }
 
 .list-item-meta {
-  @apply absolute -bottom-full left-1/2 flex flex-col items-center h-full w-full -translate-x-1/2 justify-end p-2 text-center text-xs leading-4;
+  @apply absolute -bottom-full left-1/2 flex h-full w-full -translate-x-1/2 flex-col items-center justify-end p-2 text-center text-xs leading-4;
 }
 .list-item-rating {
-  @apply text-sm font-bold text-orange-500 pl-6 bg-star bg-no-repeat bg-left mt-1;
-} 
+  @apply mt-1 bg-star bg-left bg-no-repeat pl-6 text-sm font-bold text-orange-500;
+}
 .play-button {
   @apply grow rounded-full bg-gradient-to-r from-yellow-500 to-orange-400 py-3 px-9 text-center text-lg font-bold text-white shadow-xl shadow-black/20 transition-transform;
 }
@@ -135,10 +135,10 @@ main {
   @apply pb-2 text-xl font-semibold md:text-3xl;
 }
 .game-meta {
-  @apply flex space-x-2 items-center;
+  @apply flex items-center space-x-2;
 }
 .game-rating {
-  @apply text-lg font-bold text-orange-500 pl-6 bg-star bg-no-repeat bg-left;
+  @apply bg-star bg-left bg-no-repeat pl-6 text-lg font-bold text-orange-500;
 }
 .list-item {
   @apply overflow-hidden rounded-2xl shadow-lg shadow-black/20;
