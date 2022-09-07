@@ -13,6 +13,17 @@ const nextConfig = {
     },
   },
   reactStrictMode: true,
+  compiler: {
+    removeConsole: true,
+  },
+  experimental: {
+    swcMinifyDebugOptions: {
+      compress: {
+        defaults: true,
+        side_effects: false,
+      },
+    },
+  },
   swcMinify: true,
   webpack: (config, { isServer }) => {
     if (!isServer) {
