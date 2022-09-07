@@ -36,7 +36,7 @@ export default function Home({ data, categories }) {
                   {item.total > 6 ? (
                     <Link href={`/category/${item.category.slug}`}>
                       <a>
-                        <div className="mx-4 flex justify-center border border-white/20 p-2 text-xs">
+                        <div className="more-link">
                           <span className="uppercase">&nbsp;More</span>
                         </div>
                       </a>

@@ -12,6 +12,7 @@ module.exports = {
       },
       backgroundImage: {
         loading: "url('../public/loading.svg')",
+        star: "url('../public/icon_star.svg')",
       },
     },
   },

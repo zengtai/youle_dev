@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gradient-to-br from-emerald-700 to-emerald-900 bg-fixed text-white/80;
+  @apply bg-gradient-to-br from-slate-800 to-slate-900 bg-fixed text-white/80;
 }
 
 main {
@@ -24,7 +24,7 @@ main {
 }
 
 .navbar {
-  @apply xl:relative xl:m-4 xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-b xl:from-yellow-500 xl:to-amber-500 xl:shadow-lg xl:shadow-black/20;
+  @apply xl:relative xl:m-4 xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-r xl:from-yellow-500 xl:to-amber-500 xl:shadow-lg xl:shadow-black/20;
 }
 
 .navbar-nav {
@@ -48,7 +48,7 @@ main {
 }
 
 .icon-home {
-  @apply text-yellow-300 xl:text-emerald-700;
+  @apply text-yellow-300 xl:text-green-500;
 }
 
 .icon-menu {
@@ -60,11 +60,14 @@ main {
 }
 
 .section-title {
-  @apply text-yellow-100/70 drop-shadow;
+  @apply bg-gradient-to-r from-green-300 to-cyan-600 bg-clip-text text-transparent border-l-4 pl-3 border-l-yellow-300 leading-5 my-4;
 }
 
+.more-link {
+  @apply mx-4 flex justify-center border border-yellow-500/20 p-2 text-xs text-yellow-500/80;
+}
 .site-footer {
-  @apply flex flex-col items-center bg-emerald-700/80 text-xs text-yellow-100/50;
+  @apply flex flex-col items-center bg-slate-800 text-xs text-sky-100/50;
 }
 
 .site-footer p {
@@ -72,9 +75,8 @@ main {
 }
 
 .site-footer-nav {
-  @apply flex w-full justify-center gap-4 bg-emerald-600/80 p-2;
+  @apply flex w-full justify-center gap-4 bg-slate-700 p-2 drop-shadow;
 }
-
 .breadcrumb {
   @apply mx-4 flex gap-6 border-b border-black/10 py-3 text-xs;
 }
@@ -107,14 +109,16 @@ main {
   @apply xl:flex xl:justify-end;
 }
 
-.list-item a:hover .list-item-title {
-  @apply xl:bottom-0 xl:bg-gradient-to-b xl:from-black/0 xl:to-black/80;
+.list-item a:hover .list-item-meta {
+  @apply xl:bottom-0 xl:bg-gradient-to-b xl:from-black/0 xl:to-black/90;
 }
 
-.list-item-title {
-  @apply absolute -bottom-full left-1/2 flex h-full w-full -translate-x-1/2 items-end justify-center p-2 text-center text-xs leading-4;
+.list-item-meta {
+  @apply absolute -bottom-full left-1/2 flex flex-col items-center h-full w-full -translate-x-1/2 justify-end p-2 text-center text-xs leading-4;
 }
-
+.list-item-rating {
+  @apply text-sm font-bold text-orange-500 pl-6 bg-star bg-no-repeat bg-left mt-1;
+} 
 .play-button {
   @apply grow rounded-full bg-gradient-to-r from-yellow-500 to-orange-400 py-3 px-9 text-center text-lg font-bold text-white shadow-xl shadow-black/20 transition-transform;
 }
@@ -126,7 +130,12 @@ main {
 .game-detail h1 {
   @apply pb-2 text-xl font-semibold md:text-3xl;
 }
-
+.game-meta {
+  @apply flex space-x-2 items-center;
+}
+.game-rating {
+  @apply text-lg font-bold text-orange-500 pl-6 bg-star bg-no-repeat bg-left;
+}
 .list-item {
   @apply overflow-hidden rounded-2xl shadow-lg shadow-black/20;
 }

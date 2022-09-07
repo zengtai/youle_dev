@@ -16,12 +16,13 @@ export default function Detail({ data }) {
           </div>
           <div className="xl:ml-36">
             <h1 className="text-xl xl:text-4xl">{data.title}</h1>
-            <div className="">
+            <div className="game-meta">
               <Link href={`/category/${data.category.slug}`}>
                 <a className="rounded-md bg-emerald-600/80 py-1 px-2 text-xs uppercase text-emerald-100/90 shadow-md shadow-emerald-500/30">
                   {data.category.name}
                 </a>
               </Link>
+              <div className="game-rating">{data.rating}</div>
             </div>
           </div>
           <div className="description text-sm xl:mt-4 xl:ml-36">

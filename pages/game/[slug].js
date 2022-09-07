@@ -6,6 +6,7 @@ import { getListDataBySlugs, getLocalData } from "../../lib/api";
 // import { ADS_SLOT_ID } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
+import Script from "next/script";
 
 // import Banner from "../../components/Banner";
 
@@ -17,8 +18,40 @@ export default function Game({ data, relatedSlugs, categories }) {
 
   let related = getListDataBySlugs(relatedSlugs);
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    image: `${data.thumbnailUrl}`,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: `${data.rating}`,
+      ratingCount: `${data.ratingCount}`,
+    },
+    applicationCategory: "VideoGame",
+    applicationSubCategory: `${data.category.name}`,
+    genre: `${data.category.name}`,
+    name: `${data.title}`,
+    description: `${data.description}`,
+    url: `${data.url}`,
+    offers: {
+      "@type": "Offer",
+      availability: "http://schema.org/InStock",
+      price: "0",
+      Category: "free",
+      priceCurrency: "USD",
+    },
+    operatingSystem: "any",
+  };
+
   return (
     <>
+      <Script
+        id="jsonLd"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemaData),
+        }}
+      />
       <Layout navItems={categories} title={data.title}>
         <div className="game-detail container mx-auto">
           <div className="flex flex-col xl:my-6 xl:flex-row">
@@ -85,9 +118,26 @@ export async function getStaticProps(ctx) {
   let related = data.related;
   let relatedSlugs = related.map((item) => item.slug);
 
+  let detail = Object.assign({}, data.data);
+
+  function generateRatingCount(date) {
+    let now = Date.now();
+    // console.log(`now: `, now);
+    let baseNum = ((now - Date.parse(new Date(date))) / 1000000).toFixed(2);
+    // console.log(`baseNum: `, baseNum);
+    // console.log(
+    //   `result: `,
+    //   Math.ceil(Math.random() * 10 * (baseNum > 0 ? baseNum : 1) + 10)
+    // );
+    return Math.ceil(Math.random() * 10 * (baseNum > 0 ? baseNum : 1) + 10);
+  }
+
+  detail.ratingCount =
+    detail.rating == 0 ? 0 : generateRatingCount(detail.creation_date);
+
   return {
     props: {
-      data: data.data,
+      data: detail,
       relatedSlugs,
     },
   };

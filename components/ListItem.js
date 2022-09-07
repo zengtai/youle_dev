@@ -23,9 +23,12 @@ export default function ListItem({ item, index, lazy }) {
         <Link href={`/game/${item.slug}`}>
           <a title={item.title}>
             <Image alt={item.title} lazy={lazy} />
-            <h2 className="list-item-title">
-              <span>{item.title}</span>
-            </h2>
+            <div className="list-item-meta">
+              <h2>
+                <span>{item.title}</span>
+              </h2>
+              <div className="list-item-rating">{item.rating}</div>
+            </div>
           </a>
         </Link>
       </li>
