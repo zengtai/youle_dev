@@ -60,7 +60,7 @@ main {
 }
 
 .section-title h1 {
-  @apply bg-gradient-to-r from-green-300 to-cyan-600 bg-clip-text text-transparent;
+  @apply inline-block bg-gradient-to-r from-green-300 to-cyan-600 bg-clip-text text-transparent;
 }
 
 .more-link {
@@ -86,7 +86,7 @@ main {
 }
 
 .game-category .section-title {
-  @apply my-4 mx-4 text-2xl;
+  @apply m-4 text-center text-2xl;
 }
 
 .home .section-title {
