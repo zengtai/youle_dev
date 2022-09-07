@@ -7,6 +7,7 @@ import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
 import Detail from "../../components/Detail";
 import Script from "next/script";
+import Head from "next/head";
 
 // import Banner from "../../components/Banner";
 
@@ -45,6 +46,13 @@ export default function Game({ data, relatedSlugs, categories }) {
 
   return (
     <>
+      <Head>
+        <meta name="description" content={data.description} />
+        <meta
+          name="keywords"
+          content={`${data.title.toLowerCase()}, instant games, easy game, free online games, flash games, casual games,, browser games, free games to play, arcade games, pc games download, online games for pc, best online games, free games for pc, play games online`}
+        />
+      </Head>
       <Script
         id="jsonLd"
         type="application/ld+json"
