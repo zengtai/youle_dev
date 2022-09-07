@@ -3,12 +3,25 @@ export const HomeIcon = (className) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className ? `h-5 w-5 ${className}` : `h-5 w-5`}
-      viewBox="0 0 20 20"
       width="20"
       height="20"
       fill="currentColor"
+      viewBox="0 0 20 20"
     >
-      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+      <mask
+        id="mask0_2183_998"
+        style={{ maskType: "alpha" }}
+        width="20"
+        height="20"
+        x="0"
+        y="0"
+        maskUnits="userSpaceOnUse"
+      >
+        <path d="M0 0H20V20H0z"></path>
+      </mask>
+      <g mask="url(#mask0_2183_998)">
+        <path d="M4.375 18c-.516 0-.957-.179-1.324-.537a1.74 1.74 0 01-.551-1.292V7.943c0-.29.067-.564.2-.823.132-.26.316-.472.55-.64l5.625-4.114A1.883 1.883 0 0110 2a1.883 1.883 0 011.125.366L16.75 6.48c.234.168.418.38.551.64.133.26.199.533.199.823v8.228c0 .503-.183.934-.55 1.292-.368.358-.81.537-1.325.537h-3.75v-6.4h-3.75V18h-3.75z"></path>
+      </g>
     </svg>
   );
 };
