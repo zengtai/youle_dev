@@ -20,11 +20,7 @@ main {
 }
 
 .navbar {
-  @apply justify-between border-b border-black/10 bg-black/5 text-sm font-bold text-white/80 backdrop-blur backdrop-filter xl:flex;
-}
-
-.navbar {
-  @apply xl:relative xl:m-4 xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-b xl:from-yellow-500 xl:to-amber-500 xl:shadow-lg xl:shadow-black/20;
+  @apply justify-between border-b border-black/10 bg-black/5 text-sm font-bold text-white/80 backdrop-blur backdrop-filter xl:flex xl:relative xl:m-4 xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-b xl:from-yellow-500 xl:to-amber-500 xl:shadow-lg xl:shadow-black/20;
 }
 
 .navbar-nav {

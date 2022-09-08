@@ -16,14 +16,14 @@ const nextConfig = {
   compiler: {
     removeConsole: true,
   },
-  experimental: {
-    swcMinifyDebugOptions: {
-      compress: {
-        defaults: true,
-        side_effects: false,
-      },
-    },
-  },
+  // experimental: {
+  //   swcMinifyDebugOptions: {
+  //     compress: {
+  //       defaults: true,
+  //       side_effects: false,
+  //     },
+  //   },
+  // },
   swcMinify: true,
   webpack: (config, { isServer }) => {
     if (!isServer) {
