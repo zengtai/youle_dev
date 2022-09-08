@@ -67,7 +67,7 @@ main {
 }
 
 .site-footer p {
-  @apply py-6 opacity-60;
+  @apply pb-6 opacity-60;
 }
 
 .site-footer-nav {
