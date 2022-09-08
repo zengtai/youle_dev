@@ -16,7 +16,7 @@ main {
 
 .navbar,
 .navbar-nav {
-  @apply gap-2 xl:gap-8;
+  @apply gap-2 xl:gap-x-4 xl:flex-wrap xl:px-12;
 }
 
 .navbar {
