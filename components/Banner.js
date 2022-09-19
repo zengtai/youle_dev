@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { ADS_ID } from "../lib/constants";
+import Script from "next/script";
 
 const Banner = ({
   className,
@@ -12,14 +13,14 @@ const Banner = ({
   layoutKey,
   auto,
 }) => {
-  useEffect(() => {
-    try {
-      let adsbygoogle = window.adsbygoogle || [];
-      adsbygoogle.push({});
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     let adsbygoogle = window.adsbygoogle || [];
+  //     adsbygoogle.push({});
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // }, []);
 
   return (
     <div className="my-4">
@@ -41,6 +42,19 @@ const Banner = ({
             : null)}
         />
       </div>
+      <Script
+        id={``}
+        dangerouslySetInnerHTML={{
+          __html: `
+            try {
+                let adsbygoogle = window.adsbygoogle || [];
+                adsbygoogle.push({});
+              } catch (e) {
+                console.error(e);
+              }
+          `,
+        }}
+      />
     </div>
   );
 };

@@ -194,3 +194,15 @@ main {
 .adsbygoogle {
   @apply w-full bg-black/5;
 }
+
+
+.banner {
+  background-color: #ffffff;
+  background-size: 6px 6px;
+  background-image: repeating-linear-gradient(45deg, #cdcdcd50 0, #cdcdcd50 0.6px, #ffffff10 0, #ffffff10 50%);
+  text-align: center;
+}
+
+.active .icon {
+  @apply -top-full;
+}

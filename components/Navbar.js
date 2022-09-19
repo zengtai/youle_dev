@@ -1,9 +1,9 @@
 import Link from "next/link";
 import {
-  HomeIcon,
-  MenuIcon,
-  CloseIcon,
-  CategoryIcon,
+  // HomeIcon,
+  // MenuIcon,
+  // CloseIcon,
+  // CategoryIcon,
   ActionIcon,
   CasualIcon,
   DefenseIcon,
@@ -18,6 +18,10 @@ import {
   IoIcon,
   GirlIcon,
   Match3Icon,
+  IconHome,
+  IconHistory,
+  IconCategory,
+  IconInformation,
 } from "./Icons";
 import { useState } from "react";
 
@@ -64,39 +68,80 @@ export default function Navbar({ items }) {
   }
   return (
     <>
-      <header className="site-header">
-        <nav className="navbar">
-          <Link href={`/`}>
-            <a className="navbar-brand">{HomeIcon(`icon-home`)}</a>
-          </Link>
-          <button onClick={toggle} className="navbar-toggler">
-            {isMenuOpen ? CloseIcon(`icon-close`) : MenuIcon(`icon-menu`)}
-          </button>
-          <ul
-            className={`${
-              isMenuOpen ? `grid grid-cols-2 gap-2 xl:flex` : `hidden xl:flex`
-            } navbar-nav`}
-          >
+      <nav className="site-header fixed bottom-0 z-50 w-full bg-lime-400">
+        <div className="container mx-auto pt-2 pb-8 text-xs">
+          <ul className="mx-4 grid grid-cols-4 gap-x-4 text-center md:mx-0">
             <li>
-              <Link href={`/all`}>
-                <a className="flex gap-1">
-                  <span>{CategoryIcon(`text-blue-500`)}</span>All
+              <Link
+                activeClassName="active"
+                className="flex flex-col items-center"
+                href={`/`}
+              >
+                <a>
+                  <span className="h-6 overflow-hidden">
+                    <span className="icon relative">
+                      <IconHome />
+                      <IconHome current />
+                    </span>
+                  </span>
+                  <span>Home</span>
                 </a>
               </Link>
             </li>
-            {items.map((item) => (
-              <li key={item.slug}>
-                <Link href={`/category/${item.slug}`}>
-                  <a className="flex items-center gap-1">
-                    <span>{getIcon(`${item.name}`)}</span>
-                    {item.name}
-                  </a>
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link
+                activeClassName="active"
+                className="flex flex-col items-center"
+                href={`/category/`}
+              >
+                <a>
+                  <span className="h-6 overflow-hidden">
+                    <span className="icon relative">
+                      <IconCategory />
+                      <IconCategory current />
+                    </span>
+                  </span>
+                  <span>Category</span>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClassName="active"
+                className="flex flex-col items-center"
+                href={`/recent`}
+              >
+                <a>
+                  <span className="h-6 overflow-hidden">
+                    <span className="icon relative">
+                      <IconHistory />
+                      <IconHistory current />
+                    </span>
+                  </span>
+                  <span>Recent</span>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClassName="active"
+                className="flex flex-col items-center"
+                href={`/about`}
+              >
+                <a>
+                  <span className="h-6 overflow-hidden">
+                    <span className="icon relative">
+                      <IconInformation />
+                      <IconInformation current />
+                    </span>
+                  </span>
+                  <span>About</span>
+                </a>
+              </Link>
+            </li>
           </ul>
-        </nav>
-      </header>
+        </div>
+      </nav>
     </>
   );
 }
