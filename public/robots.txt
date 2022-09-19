@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.playgames.mobi
-
-# Sitemaps
-Sitemap: https://www.playgames.mobi/sitemap.xml

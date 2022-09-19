@@ -7,11 +7,11 @@ body {
 }
 
 main {
-  @apply mt-12 xl:mt-0;
+  @apply mt-4;
 }
 
 .site-header {
-  @apply fixed z-50 w-full xl:static;
+  @apply fixed z-50 w-full;
 }
 
 .navbar,
@@ -63,16 +63,13 @@ main {
   @apply mx-4 flex justify-center border border-yellow-500/20 p-2 text-xs text-yellow-500/80;
 }
 .site-footer {
-  @apply flex flex-col items-center bg-slate-800 text-xs text-sky-100/50;
+  @apply flex flex-col items-center bg-slate-800 text-xs text-sky-100/50 mb-20;
 }
 
 .site-footer p {
-  @apply pb-6 opacity-60;
+  @apply py-6 opacity-60;
 }
 
-.site-footer-nav {
-  @apply flex w-full justify-center gap-4 bg-slate-700 p-2 drop-shadow;
-}
 .breadcrumb {
   @apply mx-4 flex gap-6 border-b border-black/10 py-3 text-xs;
 }

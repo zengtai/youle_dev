@@ -2,27 +2,18 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import ListItem from "../components/ListItem";
 import { getLocalData } from "../lib/api";
+import Head from "next/head";
 
-import Banner from "../components/Banner";
-import { ADS_SLOT_ID } from "../lib/constants";
+// import Banner from "../components/Banner";
+// import { ADS_SLOT_ID } from "../lib/constants";
 import { Fragment } from "react";
 
-export default function Home({ data, categories }) {
+export default function HomeBackUp({ data, categories }) {
   // console.log(`data`, data);
   // let tmpData = getListDataBySlugs(slugs);
 
   return (
     <Layout navItems={categories} title={`Home`}>
-      <Banner
-        className={`text-center`}
-        style={{
-          display: "inline-block",
-          width: "300px",
-          height: "250px",
-        }}
-        slot={ADS_SLOT_ID.home}
-        responsive="false"
-      />
       <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
         {data
           .slice()

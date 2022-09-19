@@ -9,7 +9,7 @@ export default function Layout({ navItems, title, children }) {
       <Head>
         <title>{`${title} | ${SITE_META.name}`}</title>
       </Head>
-      <div className="flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col">
         <Navbar items={navItems} />
         <main className="grow">{children}</main>
         <Footer />
