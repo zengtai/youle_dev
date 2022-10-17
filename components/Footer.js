@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SITE_META } from "../lib/constants";
+import Logo from "../public/logo.png";
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
         <div className="my-4 w-32 opacity-50">
           <Image
             className="h-12 w-auto"
-            src={`/logo.png`}
+            src={Logo}
             layout="responsive"
             alt={SITE_META.name}
             width={220}

@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { GAME_PATH } from "../lib/constants";
 import Breadcrumb from "./Breadcrumb";
 import Image from "./Image";
 
 export default function Detail({ data }) {
   const breadcrumbData = { title: data.title, category: data.category };
-  // console.log(`Detail data: `, data);
+  console.log(`Detail data: `, data);
   // console.log(`Breadcrumb data: `, breadcrumbData);
   return (
     <>
@@ -31,11 +32,16 @@ export default function Detail({ data }) {
         </div>
       </section>
       <button className="mx-auto flex xl:w-1/4">
-        <Link href={data.url}>
-          <a className="play-button" title={`Play "${data.title}" Now`}>
-            Play Now
-          </a>
-        </Link>
+        {/* <Link href={`/${data.appid}.html`}> */}
+        {/* <Link href={data.url}> */}
+        <a
+          href={GAME_PATH + data.appid}
+          className="play-button"
+          title={`Play "${data.title}" Now`}
+        >
+          Play Now
+        </a>
+        {/* </Link> */}
       </button>
     </>
   );

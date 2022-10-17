@@ -5,13 +5,9 @@ import { getListDataBySlugs, getLocalData } from "../lib/api";
 // import { ADS_SLOT_ID } from "../lib/constants";
 import Breadcrumb from "../components/Breadcrumb";
 
-export default function AllGames({
-  slugs,
-  categories,
-  // fullData
-}) {
+export default function AllGames({ slugs, categories }) {
   let data = getListDataBySlugs(slugs);
-  // console.log(JSON.stringify(fullData));
+  console.log(`Data:`, JSON.stringify(data));
   return (
     <>
       <Layout navItems={categories} title={`All Games`}>
@@ -43,70 +39,6 @@ export async function getStaticProps() {
   const data = await getLocalData().then((res) => res.data);
   // const data = await getLocalData().then((res) => res.data.basicData);
   const slugs = data.basicData.map((item) => item.slug);
-
-  // const SELECTED = [
-  //   "SkatingMaster",
-  //   "LittleFarm",
-  //   "BigEater",
-  //   "ShootingStar",
-  //   "ColorHammer",
-  //   "RoofRunner",
-  //   "CleverRescue",
-  //   "EasyCharger",
-  //   "BlockMaster",
-  //   "FruitsFall",
-  //   "FierceCity",
-  //   "BrainMaster",
-  //   "JumpSmash",
-  //   "MrRacer",
-  //   "MagicParkour",
-  //   "FrozenMagic",
-  //   "TrafficRun",
-  //   "TrafficPassing",
-  //   "SkyRunning3D",
-  //   "MrBullet",
-  //   "MergeAndDefense",
-  //   "FeverRacing",
-  //   "ZombieSurvival",
-  //   "HiTaxi",
-  //   "CrazyMoto",
-  //   "BlockGun3D",
-  //   "AceMan",
-  //   "CrazyKnife",
-  //   "LetMeIn",
-  //   "PetsMatch",
-  //   "Knife",
-  //   "ColorBall3D",
-  //   "GoldenGlove",
-  //   "BumbleShooter",
-  //   "FireTheGun",
-  //   "BoardTheTrain",
-  //   "DashCat",
-  //   "SpinTheMaze",
-  //   "SuperSoccer",
-  // ];
-
-  // const exportData = [];
-
-  // data.fullData.map((item) => {
-  //   SELECTED.includes(item.appid)
-  //     ? exportData.push({
-  //         id: item.id,
-  //         name: item.appid,
-  //         title: item.title,
-  //         slug: item.slug,
-  //         category: item.category.name,
-  //         description: item.description,
-  //         time: item.creation_date,
-  //         stars: item.rating,
-  //         played: item.played,
-  //       })
-  //     : null;
-  // });
-
-  // let SELECTED_categories = [
-  //   ...new Set(exportData.map((item) => item.category)),
-  // ];
 
   return {
     props: {
