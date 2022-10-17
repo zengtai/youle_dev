@@ -7,3 +7,5 @@ Host: https://www.uptapgames.com
 
 # Sitemaps
 Sitemap: https://www.uptapgames.com/sitemap.xml
+
+Disallow: cdn.uptapgames.com
