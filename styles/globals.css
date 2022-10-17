@@ -20,11 +20,11 @@ main {
 }
 
 .navbar {
-  @apply justify-between border-b border-black/10 bg-black/5 text-sm font-bold text-white/80 backdrop-blur backdrop-filter xl:relative xl:m-4 xl:flex xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-b xl:from-yellow-500 xl:to-amber-500 xl:shadow-lg xl:shadow-black/20;
+  @apply justify-between border-b border-black/10 bg-black/5 text-sm font-bold text-white/80 backdrop-blur backdrop-filter xl:relative xl:m-4 xl:flex xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-b xl:from-lime-500 xl:to-green-500 xl:shadow-lg xl:shadow-black/20;
 }
 
 .navbar-nav {
-  @apply m-4 mt-0 rounded-3xl bg-gradient-to-b from-yellow-500 to-amber-500 p-4 shadow-lg shadow-black/20 xl:m-0 xl:bg-none xl:p-3 xl:shadow-none;
+  @apply m-4 mt-0 rounded-3xl bg-gradient-to-b from-green-500 to-lime-500 p-4 shadow-lg shadow-black/20 xl:m-0 xl:bg-none xl:p-3 xl:shadow-none;
 }
 
 .navbar-nav li {
@@ -44,7 +44,7 @@ main {
 }
 
 .icon-home {
-  @apply text-yellow-300 xl:text-green-500;
+  @apply text-yellow-300 xl:text-yellow-400;
 }
 
 .icon-menu {
@@ -56,11 +56,11 @@ main {
 }
 
 .section-title h1 {
-  @apply inline-block bg-gradient-to-r from-green-300 to-cyan-600 bg-clip-text text-transparent;
+  @apply inline-block bg-gradient-to-r from-lime-300 to-cyan-600 bg-clip-text text-transparent;
 }
 
 .more-link {
-  @apply mx-4 flex justify-center border border-yellow-500/20 p-2 text-xs text-yellow-500/80;
+  @apply mx-4 flex justify-center border border-lime-500/20 p-2 text-xs text-lime-500/80;
 }
 .site-footer {
   @apply flex flex-col items-center bg-sky-800 text-xs text-sky-100/50;

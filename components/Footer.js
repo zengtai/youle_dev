@@ -9,9 +9,9 @@ export default function Footer() {
           <a href={`/t/privacy-policy`}>Privacy Policy</a>
           <a href={`/t/terms-of-use`}>Terms of Use</a>
         </nav>
-        <div className="my-3 w-32">
+        <div className="my-4 w-32 opacity-50">
           <Image
-            className="h-14 w-auto"
+            className="h-12 w-auto"
             src={`/logo.png`}
             layout="responsive"
             alt={SITE_META.name}
