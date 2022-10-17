@@ -3,9 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.playgames.mobi
+Host: https://www.uptapgames.com
 
 # Sitemaps
-Sitemap: https://www.playgames.mobi/sitemap.xml
-
-Disallow: cdn.playgames.mobi
+Sitemap: https://www.uptapgames.com/sitemap.xml

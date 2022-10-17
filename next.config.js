@@ -7,10 +7,9 @@ const nextConfig = {
   //   // deviceSizes: [640, 750, 828, 1080, 1200, 1920],
   //   // imageSizes: [96, 128, 256, 384],
   // },
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
+
+  images: {
+    unoptimized: true,
   },
   reactStrictMode: true,
   compiler: {

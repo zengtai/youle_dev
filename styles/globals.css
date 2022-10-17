@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gradient-to-br from-slate-800 to-slate-900 bg-fixed text-white/80;
+  @apply bg-gradient-to-br from-sky-800 to-sky-900 bg-fixed text-white/80;
 }
 
 main {
@@ -16,11 +16,11 @@ main {
 
 .navbar,
 .navbar-nav {
-  @apply gap-2 xl:gap-x-4 xl:flex-wrap xl:px-12;
+  @apply gap-2 xl:flex-wrap xl:gap-x-4 xl:px-12;
 }
 
 .navbar {
-  @apply justify-between border-b border-black/10 bg-black/5 text-sm font-bold text-white/80 backdrop-blur backdrop-filter xl:flex xl:relative xl:m-4 xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-b xl:from-yellow-500 xl:to-amber-500 xl:shadow-lg xl:shadow-black/20;
+  @apply justify-between border-b border-black/10 bg-black/5 text-sm font-bold text-white/80 backdrop-blur backdrop-filter xl:relative xl:m-4 xl:flex xl:justify-center xl:rounded-full xl:border-b-0 xl:bg-gradient-to-b xl:from-yellow-500 xl:to-amber-500 xl:shadow-lg xl:shadow-black/20;
 }
 
 .navbar-nav {
@@ -63,7 +63,7 @@ main {
   @apply mx-4 flex justify-center border border-yellow-500/20 p-2 text-xs text-yellow-500/80;
 }
 .site-footer {
-  @apply flex flex-col items-center bg-slate-800 text-xs text-sky-100/50;
+  @apply flex flex-col items-center bg-sky-800 text-xs text-sky-100/50;
 }
 
 .site-footer p {
@@ -71,7 +71,7 @@ main {
 }
 
 .site-footer-nav {
-  @apply flex w-full justify-center gap-4 bg-slate-700 p-2 drop-shadow;
+  @apply flex w-full justify-center gap-4 bg-sky-700 p-2 drop-shadow;
 }
 .breadcrumb {
   @apply mx-4 flex gap-6 border-b border-black/10 py-3 text-xs;

@@ -12,10 +12,10 @@ export default function Footer() {
         <div className="my-3 w-32">
           <Image
             className="h-14 w-auto"
-            src={`/playgames-logo.png`}
+            src={`/logo.png`}
             layout="responsive"
             alt={SITE_META.name}
-            width={257}
+            width={220}
             height={80}
           />
         </div>
