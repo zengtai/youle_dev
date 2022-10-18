@@ -29,7 +29,7 @@ export default function Home({ data, categories }) {
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
           {data
             .slice()
-            // .sort((a, b) => (a.total < b.total ? 1 : -1))
+            .sort((a) => (a.total < 5 ? 1 : -1))
             // .sort((a, b) => (a.total > b.total && a.name < b.name ? 1 : -1))
             .map((item, index) => {
               return (
@@ -39,13 +39,16 @@ export default function Home({ data, categories }) {
                       <h1 className="font-bold">{`${item.category.name} Games`}</h1>
                     </header>
                     <ul className="mx-4 grid grid-cols-3 gap-4">
-                      {item.data.map((item) => (
-                        <ListItem
-                          item={item}
-                          key={item.id}
-                          lazy={index > 2 ? true : false}
-                        />
-                      ))}
+                      {item.data
+                        .slice()
+                        .sort((a, b) => a.title > b.title)
+                        .map((item) => (
+                          <ListItem
+                            item={item}
+                            key={item.id}
+                            lazy={index > 2 ? true : false}
+                          />
+                        ))}
                     </ul>
                     {item.total > 6 ? (
                       <Link href={`/category/${item.category.slug}`}>
