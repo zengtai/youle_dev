@@ -27,7 +27,7 @@ export default function ListItem({ item, index, lazy }) {
               <h2>
                 <span>{item.title}</span>
               </h2>
-              <div className="list-item-rating">{item.rating}</div>
+              {/* <div className="list-item-rating">{item.rating}</div> */}
             </div>
           </a>
         </Link>
