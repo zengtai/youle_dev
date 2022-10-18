@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { useEffect } from "react";
 import { ADS_ID, DEV_MODE } from "../lib/constants";
 
@@ -12,15 +13,15 @@ const Banner = ({
   layoutKey,
   auto,
 }) => {
-  useEffect(() => {
-    try {
-      let adsbygoogle = window.adsbygoogle || [];
-      adsbygoogle.push({});
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
-
+  // useEffect(() => {
+  //   try {
+  //     let adsbygoogle = window.adsbygoogle || [];
+  //     adsbygoogle.push({});
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // }, []);
+  const devMode = `${process.env.NODE_ENV}` === `development`;
   return (
     <div className="my-4">
       <div className="text-center text-xs uppercase opacity-50">
@@ -44,9 +45,17 @@ const Banner = ({
           data-ad-slot={slot}
           data-ad-layout-key={layoutKey}
           data-full-width-responsive={auto ? `true` : responsive}
-          {...(process.env.NODE_ENV === `development` || DEV_MODE === true
-            ? { "data-adtest": "on" }
-            : null)}
+          {...(devMode || DEV_MODE === true ? { "data-adtest": "on" } : null)}
+        />
+        <Script
+          id={Math.random()}
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                (adsbygoogle = window.adsbygoogle || []).push({})
+              } catch(e) { console.log(e) }
+            `,
+          }}
         />
       </div>
     </div>
