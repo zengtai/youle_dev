@@ -29,7 +29,8 @@ export default function Home({ data, categories }) {
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
           {data
             .slice()
-            .sort((a) => (a.total < 5 ? 1 : -1))
+            .sort((a, b) => b.total - a.total)
+            // .sort((a) => (a.total < 5 ? 1 : -1))
             // .sort((a, b) => (a.total > b.total && a.name < b.name ? 1 : -1))
             .map((item, index) => {
               return (
