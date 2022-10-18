@@ -3,13 +3,13 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
-// import { ADS_SLOT_ID } from "../../lib/constants";
+import { ADS_SLOT_ID } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
 import Script from "next/script";
 import Head from "next/head";
 
-// import Banner from "../../components/Banner";
+import Banner from "../../components/Banner";
 
 export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`data`, data);
@@ -19,65 +19,20 @@ export default function Game({ data, relatedSlugs, categories }) {
 
   let related = getListDataBySlugs(relatedSlugs);
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    image: `${data.thumbnailUrl}`,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: `${data.rating}`,
-      ratingCount: `${data.ratingCount}`,
-    },
-    applicationCategory: "VideoGame",
-    applicationSubCategory: `${data.category.name}`,
-    genre: `${data.category.name}`,
-    name: `${data.title}`,
-    description: `${data.description}`,
-    url: `${data.url}`,
-    offers: {
-      "@type": "Offer",
-      availability: "http://schema.org/InStock",
-      price: "0",
-      Category: "free",
-      priceCurrency: "USD",
-    },
-    operatingSystem: "any",
-  };
-
   return (
     <>
-      <Head>
-        <meta name="description" content={data.description} />
-        <meta
-          name="keywords"
-          content={`${data.title.toLowerCase()}, instant games, easy game, free online games, flash games, casual games,, browser games, free games to play, arcade games, pc games download, online games for pc, best online games, free games for pc, play games online`}
-        />
-      </Head>
-      <Script
-        id="jsonLd"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schemaData),
-        }}
-      />
       <Layout navItems={categories} title={data.title}>
         <div className="game-detail container mx-auto">
           <div className="flex flex-col xl:my-6 xl:flex-row">
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
                 <Detail data={data} />
-                {/* <Banner
-                  className={`banner ad-container text-center`}
-                  style={{
-                    display: "inline-block",
-                    height: "100%",
-                    maxWidth: "768px",
-                  }}
+                <Banner
+                  auto
                   // style={{ width: "100%", height: "100%" }}
                   slot={ADS_SLOT_ID.detail}
-                  responsive="false"
                   key={Math.random()}
-                /> */}
+                />
               </div>
               <header className="section-title m-4 xl:sr-only">
                 <h2 className="font-bold">You May Also Like</h2>

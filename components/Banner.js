@@ -26,17 +26,25 @@ const Banner = ({
       <div className="text-center text-xs uppercase opacity-50">
         Advertisement
       </div>
-      <div className={className}>
+      <div className={className ? className + ` text-center` : `text-center`}>
         <ins
           className={`adsbygoogle`}
-          style={style}
+          style={
+            auto
+              ? {
+                  display: "inline-block",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }
+              : style
+          }
           data-ad-layout={layout}
           data-ad-format={auto ? `auto` : format}
           data-ad-client={client}
           data-ad-slot={slot}
           data-ad-layout-key={layoutKey}
           data-full-width-responsive={auto ? `true` : responsive}
-          {...(process.env.NODE_ENV === `development`
+          {...(process.env.NODE_ENV === `development` || DEV_MODE === "true"
             ? { "data-adtest": "on" }
             : null)}
         />

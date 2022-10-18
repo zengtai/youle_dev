@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply bg-sky-800;
+}
 body {
   @apply bg-gradient-to-br from-sky-800 to-sky-900 bg-fixed text-white/80;
 }
@@ -80,7 +83,9 @@ main {
 .breadcrumb-item {
   @apply relative after:absolute after:-right-4 after:opacity-50 after:content-['/'];
 }
-
+.detail {
+  @apply col-span-6 col-start-4 m-4 rounded-3xl border-8 border-blue-50 bg-white text-slate-500 xl:mx-6 xl:mt-0 xl:mb-4;
+}
 .game-category .section-title {
   @apply m-4 text-center text-2xl;
 }
@@ -192,5 +197,5 @@ main {
 }
 
 .adsbygoogle {
-  @apply w-full bg-black/5;
+  @apply mx-auto w-full bg-black/5;
 }

@@ -2,10 +2,10 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import ListItem from "../components/ListItem";
 import { getLocalData } from "../lib/api";
-import Head from "next/head";
 
-// import Banner from "../components/Banner";
-// import { ADS_SLOT_ID } from "../lib/constants";
+import Banner from "../components/Banner";
+import { ADS_SLOT_ID } from "../lib/constants";
+
 import { Fragment } from "react";
 
 export default function Home({ data, categories }) {
@@ -14,20 +14,11 @@ export default function Home({ data, categories }) {
 
   return (
     <Layout navItems={categories} title={`Home`}>
-      <Head>
-        <meta
-          name="description"
-          content="Come to PlayGames.mobi to play the newest online casual games for free!"
-        />
-        <meta
-          name="keywords"
-          content={`playgames, play games, instant games, easy game, free online games, casual games, flash games, browser games, free games to play, arcade games, pc games download, online games for pc, best online games, free games for pc, play games online`}
-        />
-      </Head>
       <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
         {data
           .slice()
-          .sort((a, b) => (a.total < b.total ? 1 : -1))
+          // .sort((a, b) => (a.total < b.total ? 1 : -1))
+          // .sort((a, b) => (a.total > b.total && a.name < b.name ? 1 : -1))
           .map((item, index) => {
             return (
               <Fragment key={item.category.slug}>
@@ -54,18 +45,9 @@ export default function Home({ data, categories }) {
                     </Link>
                   ) : null}
                 </section>
-                {/* {index == 0 || index == 2 ? (
-                  <Banner
-                    className={`text-center`}
-                    style={{
-                      display: "inline-block",
-                      width: "300px",
-                      height: "250px",
-                    }}
-                    slot={ADS_SLOT_ID.home}
-                    responsive="false"
-                  />
-                ) : null} */}
+                {index == 0 || index == 2 ? (
+                  <Banner auto slot={ADS_SLOT_ID.home} />
+                ) : null}
               </Fragment>
             );
           })}

@@ -9,7 +9,7 @@ export default function Detail({ data }) {
   // console.log(`Breadcrumb data: `, breadcrumbData);
   return (
     <>
-      <section className="col-span-6 col-start-4 m-4 rounded-3xl border-8 border-blue-50 bg-white text-slate-500 xl:mx-6 xl:mt-0 xl:mb-4">
+      <section className="detail">
         <Breadcrumb item={breadcrumbData} />
         <div className="relative order-2 flex basis-3/5 flex-wrap gap-4 p-4 xl:block">
           <div className="left-4 top-4 w-20 xl:absolute xl:w-32">
