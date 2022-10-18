@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ADS_ID } from "../lib/constants";
+import { ADS_ID, DEV_MODE } from "../lib/constants";
 
 const Banner = ({
   className,
@@ -44,7 +44,7 @@ const Banner = ({
           data-ad-slot={slot}
           data-ad-layout-key={layoutKey}
           data-full-width-responsive={auto ? `true` : responsive}
-          {...(process.env.NODE_ENV === `development` || DEV_MODE === "true"
+          {...(process.env.NODE_ENV === `development` || DEV_MODE === true
             ? { "data-adtest": "on" }
             : null)}
         />

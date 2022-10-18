@@ -13,7 +13,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   compiler: {
-    // removeConsole: true,
+    removeConsole: true,
   },
   // experimental: {
   //   swcMinifyDebugOptions: {

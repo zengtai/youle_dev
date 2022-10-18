@@ -10,13 +10,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-            crossOrigin="anonymous"
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />

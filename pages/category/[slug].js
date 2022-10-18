@@ -4,7 +4,8 @@ import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
 import Banner from "../../components/Banner";
-import { ADS_SLOT_ID } from "../../lib/constants";
+import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
+import Head from "next/head";
 
 export default function Category({ slugs, category, categories }) {
   // console.log(`category`, category);
@@ -13,26 +14,36 @@ export default function Category({ slugs, category, categories }) {
   // console.log(`data`, data);
 
   return (
-    <Layout navItems={categories} title={`${category} Games`}>
-      <div className="game-category container mx-auto">
-        <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} />
+    <>
+      <Head>
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+          crossOrigin="anonymous"
+        />
+      </Head>
 
-        <Breadcrumb item={category} />
-        {/* <Banner
+      <Layout navItems={categories} title={`${category} Games`}>
+        <div className="game-category container mx-auto">
+          <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} />
+
+          <Breadcrumb item={category} />
+          {/* <Banner
           className={`banner banner_fw ad-container`}
           style={{ display: "block", height: "100%" }}
           slot={ADS_SLOT_ID.category}
           responsive="false"
           key={Math.random()}
         /> */}
-        <section className="mt-4 mb-8">
-          <header className="section-title">
-            <h1 className="text-center font-bold">{`${category} Games`}</h1>
-          </header>
-          <List items={data} />
-        </section>
-      </div>
-    </Layout>
+          <section className="mt-4 mb-8">
+            <header className="section-title">
+              <h1 className="text-center font-bold">{`${category} Games`}</h1>
+            </header>
+            <List items={data} />
+          </section>
+        </div>
+      </Layout>
+    </>
   );
 }
 
