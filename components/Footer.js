@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE_META } from "../lib/constants";
 import Logo from "../public/logo.png";
 
@@ -7,8 +8,8 @@ export default function Footer() {
     <>
       <footer className="site-footer">
         <nav className="site-footer-nav">
-          <a href={`/t/privacy-policy`}>Privacy Policy</a>
-          <a href={`/t/terms-of-use`}>Terms of Use</a>
+          <Link href={`/t/privacy-policy`}>Privacy Policy</Link>
+          <Link href={`/t/terms-of-use`}>Terms of Use</Link>
         </nav>
         <div className="my-4 w-32 opacity-50">
           <Image

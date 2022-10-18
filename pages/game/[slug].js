@@ -7,7 +7,7 @@ import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
 
-import Head from "next/head";
+// import Script from "next/script";
 
 import Banner from "../../components/Banner";
 
@@ -21,13 +21,12 @@ export default function Game({ data, relatedSlugs, categories }) {
 
   return (
     <>
-      <Head>
-        <script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-          crossOrigin="anonymous"
-        />
-      </Head>
+      <script
+        id={`gads-init`}
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+        crossOrigin="anonymous"
+      />
       <Layout navItems={categories} title={data.title}>
         <div className="game-detail container mx-auto">
           <div className="flex flex-col xl:my-6 xl:flex-row">

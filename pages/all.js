@@ -2,7 +2,8 @@ import Layout from "../components/Layout";
 import List from "../components/List";
 import { getListDataBySlugs, getLocalData } from "../lib/api";
 // import Banner from "../components/Banner";
-import Head from "next/head";
+// import Script from "next/script";
+// import Head from "next/head";
 import { ADS_SLOT_ID, ADS_ID } from "../lib/constants";
 import Breadcrumb from "../components/Breadcrumb";
 import Banner from "../components/Banner";
@@ -12,13 +13,12 @@ export default function AllGames({ slugs, categories }) {
   // console.log(`Data:`, JSON.stringify(data));
   return (
     <>
-      <Head>
-        <script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-          crossOrigin="anonymous"
-        />
-      </Head>
+      <script
+        id={`gads-init`}
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+        crossOrigin="anonymous"
+      />
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
           <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} />
