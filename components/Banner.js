@@ -13,14 +13,25 @@ const Banner = ({
   layoutKey,
   auto,
 }) => {
-  // useEffect(() => {
-  //   try {
-  //     let adsbygoogle = window.adsbygoogle || [];
-  //     adsbygoogle.push({});
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // }, []);
+  useEffect(() => {
+    try {
+      // let adsbygoogle = window.adsbygoogle || [];
+      // adsbygoogle.push({});
+      let scripts = document.querySelectorAll(`.ad_`);
+      console.log(`1 scripts:`, scripts);
+      for (let i of scripts) {
+        console.log(i);
+        i.parentNode.removeChild(i);
+      }
+      // let ads = scripts.filter((i) =>
+      //   i.getAttributeNode("id").value.match(/ad_/g)
+      // );
+      // console.log(ads);
+      console.log(`2 scripts:`, scripts);
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
   const devMode = `${process.env.NODE_ENV}` === `development`;
   return (
     <div className="my-4">
@@ -49,6 +60,7 @@ const Banner = ({
         />
         <Script
           id={Math.random()}
+          className={`ad_`}
           dangerouslySetInnerHTML={{
             __html: `
               try {

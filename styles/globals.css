@@ -70,7 +70,7 @@ main {
 }
 
 .site-footer p {
-  @apply pb-6 opacity-60;
+  @apply py-6 opacity-60;
 }
 
 .site-footer-nav {
@@ -198,4 +198,23 @@ main {
 
 .adsbygoogle {
   @apply mx-auto w-full bg-black/5;
+}
+
+.site-policy {
+  @apply mx-4 mt-4 pb-4 text-sm md:p-8 xl:mx-auto xl:w-[1120px];
+}
+
+.site-policy h1 {
+  @apply pb-3 text-2xl font-bold text-white/80;
+}
+
+.site-policy h2 {
+  @apply my-3 text-lg font-bold;
+}
+.site-policy ul {
+  @apply my-2 ml-4 list-outside list-disc;
+}
+
+.site-policy p {
+  @apply my-2;
 }

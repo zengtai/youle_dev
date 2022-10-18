@@ -1,7 +1,7 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { SITE_META } from "../lib/constants";
-import Logo from "../public/logo.png";
+// import Logo from "../public/logo.png";
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
           <Link href={`/t/privacy-policy`}>Privacy Policy</Link>
           <Link href={`/t/terms-of-use`}>Terms of Use</Link>
         </nav>
-        <div className="my-4 w-32 opacity-50">
+        {/* <div className="my-4 w-32 opacity-50">
           <Image
             className="h-12 w-auto"
             src={Logo}
@@ -20,7 +20,7 @@ export default function Footer() {
             width={220}
             height={80}
           />
-        </div>
+        </div> */}
         <p>
           {`© ${new Date().getFullYear()} ${SITE_META.name}. All
           Rights Reserved.`}

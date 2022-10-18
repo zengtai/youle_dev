@@ -2,24 +2,23 @@ import Layout from "../../components/Layout";
 import { SITE_META } from "../../lib/constants";
 
 export default function Terms({ categories }) {
+  console.log(`categories: `, categories);
   return (
     <>
       <Layout title={`Terms of Use`} navItems={categories}>
-        <div className="mx-4 mt-4 pt-16 pb-4 text-sm md:p-8 xl:mx-auto xl:w-[1120px]">
-          <h1 className="pb-3 text-2xl font-bold text-white/80">
-            Terms of Use
-          </h1>
-          <p className="my-2">
+        <div className="site-policy">
+          <h1>Terms of Use</h1>
+          <p>
             The {SITE_META.name} website located at {SITE_META.url} is a
             copyrighted work belonging to {SITE_META.name}. Certain features of
             the Site may be subject to additional guidelines, terms, or rules,
             which will be posted on the Site in connection with such features.
           </p>
-          <p className="my-2">
+          <p>
             All such additional terms, guidelines, and rules are incorporated by
             reference into these Terms.
           </p>
-          <p className="my-2">
+          <p>
             These Terms of Use described the legally binding terms and
             conditions that oversee your use of the Site.&nbsp;BY LOGGING INTO
             THE SITE, YOU ARE BEING COMPLIANT THAT THESE TERMS and you represent
@@ -28,18 +27,18 @@ export default function Terms({ categories }) {
             SITE. IF YOU DISAGREE WITH ALL OF THE PROVISION OF THESE TERMS, DO
             NOT LOG INTO AND/OR USE THE SITE.
           </p>
-          <p className="my-2">
+          <p>
             These terms require the use of arbitration Section 10.2 on an
             individual basis to resolve disputes and also limit the remedies
             available to you in the event of a dispute.
           </p>
-          <h2 className="text-md my-3 font-bold">Access to the Site</h2>
-          <p className="my-2">
+          <h2>Access to the Site</h2>
+          <p>
             <strong>Subject to these Terms.</strong> Company grants you a
             non-transferable, non-exclusive, revocable, limited license to
             access the Site solely for your own personal, noncommercial use.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Certain Restrictions.</strong> The rights approved to you in
             these Terms are subject to the following restrictions: (a) you shall
             not sell, rent, lease, transfer, assign, distribute, host, or
@@ -55,18 +54,18 @@ export default function Terms({ categories }) {
             copyright and other proprietary notices on the Site must be retained
             on all copies thereof.
           </p>
-          <p className="my-2">
+          <p>
             Company reserves the right to change, suspend, or cease the Site
             with or without notice to you.&nbsp; You approved that Company will
             not be held liable to you or any third-party for any change,
             interruption, or termination of the Site or any part.
           </p>
-          <p className="my-2">
+          <p>
             <strong>No Support or Maintenance.</strong> You agree that Company
             will have no obligation to provide you with any support in
             connection with the Site.
           </p>
-          <p className="my-2">
+          <p>
             Excluding any User Content that you may provide, you are aware that
             all the intellectual property rights, including copyrights, patents,
             trademarks, and trade secrets, in the Site and its content are owned
@@ -76,10 +75,8 @@ export default function Terms({ categories }) {
             rights expressed in Section 2.1. Company and its suppliers reserve
             all rights not granted in these Terms.
           </p>
-          <h2 className="text-md my-3 font-bold">
-            Third-Party Links &amp; Ads; Other Users
-          </h2>
-          <p className="my-2">
+          <h2>Third-Party Links &amp; Ads; Other Users</h2>
+          <p>
             <strong>Third-Party Links &amp; Ads.</strong> The Site may contain
             links to third-party websites and services, and/or display
             advertisements for third-parties.&nbsp; Such Third-Party Links &amp;
@@ -95,7 +92,7 @@ export default function Terms({ categories }) {
             apply, including the third party’s privacy and data gathering
             practices.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Other Users.</strong> Each Site user is solely responsible
             for any and all of its own User Content.&nbsp; Because we do not
             control User Content, you acknowledge and agree that we are not
@@ -105,7 +102,7 @@ export default function Terms({ categories }) {
             interactions.&nbsp; If there is a dispute between you and any Site
             user, we are under no obligation to become involved.
           </p>
-          <p className="my-2">
+          <p>
             You hereby release and forever discharge the Company and our
             officers, employees, agents, successors, and assigns from, and
             hereby waive and relinquish, each and every past, present and future
@@ -120,7 +117,7 @@ export default function Terms({ categories }) {
             him or her must have materially affected his or her settlement with
             the debtor.”
           </p>
-          <p className="my-2">
+          <p>
             <strong>Cookies and Web Beacons.</strong> Like any other website,
             {SITE_META.name} uses ‘cookies’. These cookies are used to store
             information including visitors’ preferences, and the pages on the
@@ -128,7 +125,7 @@ export default function Terms({ categories }) {
             used to optimize the users’ experience by customizing our web page
             content based on visitors’ browser type and/or other information.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Google DoubleClick DART Cookie.</strong> Google is one of a
             third-party vendor on our site. It also uses cookies, known as DART
             cookies, to serve ads to our site visitors based upon their visit to
@@ -139,8 +136,8 @@ export default function Terms({ categories }) {
               https://policies.google.com/technologies/ads
             </a>
           </p>
-          <h2 className="text-md my-3 font-bold">Disclaimers</h2>
-          <p className="my-2">
+          <h2>Disclaimers</h2>
+          <p>
             The site is provided on an “as-is” and “as available” basis, and
             company and our suppliers expressly disclaim any and all warranties
             and conditions of any kind, whether express, implied, or statutory,
@@ -154,14 +151,14 @@ export default function Terms({ categories }) {
             respect to the site, all such warranties are limited in duration to
             ninety (90) days from the date of first use.
           </p>
-          <p className="my-2">
+          <p>
             Some jurisdictions do not allow the exclusion of implied warranties,
             so the above exclusion may not apply to you.&nbsp; Some
             jurisdictions do not allow limitations on how long an implied
             warranty lasts, so the above limitation may not apply to you.
           </p>
-          <h2 className="text-md my-3 font-bold">Limitation on Liability</h2>
-          <p className="my-2">
+          <h2>Limitation on Liability</h2>
+          <p>
             To the maximum extent permitted by law, in no event shall company or
             our suppliers be liable to you or any third-party for any lost
             profits, lost data, costs of procurement of substitute products, or
@@ -173,7 +170,7 @@ export default function Terms({ categories }) {
             responsible for any damage to your device or computer system, or
             loss of data resulting therefrom.
           </p>
-          <p className="my-2">
+          <p>
             To the maximum extent permitted by law, notwithstanding anything to
             the contrary contained herein, our liability to you for any damages
             arising from or related to this agreement, will at all times be
@@ -182,12 +179,12 @@ export default function Terms({ categories }) {
             that our suppliers will have no liability of any kind arising from
             or relating to this agreement.
           </p>
-          <p className="my-2">
+          <p>
             Some jurisdictions do not allow the limitation or exclusion of
             liability for incidental or consequential damages, so the above
             limitation or exclusion may not apply to you.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Term and Termination.</strong> Subject to this Section,
             these Terms will remain in full force and effect while you use the
             Site.&nbsp; We may suspend or terminate your rights to use the Site
@@ -203,8 +200,8 @@ export default function Terms({ categories }) {
             provisions of these Terms will remain in effect: Sections 2 through
             2.5, Section 3 and Sections 4 through 10.
           </p>
-          <h2 className="text-md my-3 font-bold">Copyright Policy.</h2>
-          <p className="my-2">
+          <h2>Copyright Policy.</h2>
+          <p>
             Company respects the intellectual property of others and asks that
             users of our Site do the same.&nbsp; In connection with our Site, we
             have adopted and implemented a policy respecting copyright law that
@@ -243,15 +240,15 @@ export default function Terms({ categories }) {
               authorized to act on behalf of the copyright owner.
             </li>
           </ul>
-          <p className="my-2">
+          <p>
             Please note that, pursuant to 17 U.S.C. § 512(f), any
             misrepresentation of material fact in a written notification
             automatically subjects the complaining party to liability for any
             damages, costs and attorney’s fees incurred by us in connection with
             the written notification and allegation of copyright infringement.
           </p>
-          <h2 className="text-md my-3 font-bold">General</h2>
-          <p className="my-2">
+          <h2>General</h2>
+          <p>
             These Terms are subject to occasional revision, and if we make any
             substantial changes, we may notify you by sending you an e-mail to
             the last e-mail address you provided to us and/or by prominently
@@ -273,7 +270,7 @@ export default function Terms({ categories }) {
             contains procedures for MANDATORY BINDING ARBITRATION AND A CLASS
             ACTION WAIVER.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Applicability of Arbitration Agreement.</strong> All claims
             and disputes in connection with the Terms or the use of any product
             or service provided by the Company that cannot be resolved
@@ -287,7 +284,7 @@ export default function Terms({ categories }) {
             unauthorized users or beneficiaries of services or goods provided
             under the Terms.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Notice Requirement and Informal Dispute Resolution.</strong>{" "}
             Before either party may seek arbitration, the party must first send
             to the other party a written Notice of Dispute describing the nature
@@ -302,7 +299,7 @@ export default function Terms({ categories }) {
             determined the amount of the award to which either party is
             entitled.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Arbitration Rules.</strong> Arbitration shall be initiated
             through the American Arbitration Association, an established
             alternative dispute resolution provider that offers arbitration as
@@ -334,7 +331,7 @@ export default function Terms({ categories }) {
             and shall pay an equal share of the fees and costs of the ADR
             Provider.
           </p>
-          <p className="my-2">
+          <p>
             <strong>
               Additional Rules for Non-Appearance Based Arbitration.
             </strong>{" "}
@@ -345,13 +342,13 @@ export default function Terms({ categories }) {
             involve any personal appearance by the parties or witnesses unless
             otherwise agreed by the parties.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Time Limits.</strong> If you or the Company pursues
             arbitration, the arbitration action must be initiated and/or
             demanded within the statute of limitations and within any deadline
             imposed under the AAA Rules for the pertinent claim.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Authority of Arbitrator.</strong> If arbitration is
             initiated, the arbitrator will decide the rights and liabilities of
             you and the Company, and the dispute will not be consolidated with
@@ -367,7 +364,7 @@ export default function Terms({ categories }) {
             basis that a judge in a court of law would have.&nbsp; The award of
             the arbitrator is final and binding upon you and the Company.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Waiver of Jury Trial.</strong> THE PARTIES HEREBY WAIVE
             THEIR CONSTITUTIONAL AND STATUTORY RIGHTS TO GO TO COURT AND HAVE A
             TRIAL IN FRONT OF A JUDGE OR A JURY, instead electing that all
@@ -381,7 +378,7 @@ export default function Terms({ categories }) {
             ALL RIGHTS TO A JURY TRIAL, instead electing that the dispute be
             resolved by a judge.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Waiver of Class or Consolidated Actions.</strong> All claims
             and disputes within the scope of this arbitration agreement must be
             arbitrated or litigated on an individual basis and not on a class
@@ -389,7 +386,7 @@ export default function Terms({ categories }) {
             arbitrated or litigated jointly or consolidated with those of any
             other customer or user.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Confidentiality.</strong> All aspects of the arbitration
             proceeding shall be strictly confidential.&nbsp; The parties agree
             to maintain confidentiality unless otherwise required by law.&nbsp;
@@ -398,7 +395,7 @@ export default function Terms({ categories }) {
             enforce an arbitration award, or to seek injunctive or equitable
             relief.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Severability.</strong> If any part or parts of this
             Arbitration Agreement are found under the law to be invalid or
             unenforceable by a court of competent jurisdiction, then such
@@ -406,23 +403,23 @@ export default function Terms({ categories }) {
             severed and the remainder of the Agreement shall continue in full
             force and effect.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Right to Waive.</strong> Any or all of the rights and
             limitations set forth in this Arbitration Agreement may be waived by
             the party against whom the claim is asserted.&nbsp; Such waiver
             shall not waive or affect any other portion of this Arbitration
             Agreement.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Survival of Agreement.</strong> This Arbitration Agreement
             will survive the termination of your relationship with Company.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Small Claims Court.</strong> Nonetheless the foregoing,
             either you or the Company may bring an individual action in small
             claims court.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Emergency Equitable Relief.</strong> Anyhow the foregoing,
             either party may seek emergency equitable relief before a state or
             federal court in order to maintain the status quo pending
@@ -430,20 +427,20 @@ export default function Terms({ categories }) {
             deemed a waiver of any other rights or obligations under this
             Arbitration Agreement.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Claims Not Subject to Arbitration.</strong> Notwithstanding
             the foregoing, claims of defamation, violation of the Computer Fraud
             and Abuse Act, and infringement or misappropriation of the other
             party’s patent, copyright, trademark or trade secrets shall not be
             subject to this Arbitration Agreement.
           </p>
-          <p className="my-2">
+          <p>
             In any circumstances where the foregoing Arbitration Agreement
             permits the parties to litigate in court, the parties hereby agree
             to submit to the personal jurisdiction of the courts located within
             Netherlands County, California, for such purposes.
           </p>
-          <p className="my-2">
+          <p>
             The Site may be subject to U.S. export control laws and may be
             subject to export or import regulations in other countries. You
             agree not to export, re-export, or transfer, directly or indirectly,
@@ -451,7 +448,7 @@ export default function Terms({ categories }) {
             utilizing such data, in violation of the United States export laws
             or regulations.
           </p>
-          <p className="my-2">
+          <p>
             Company is located at the address in Section 10.8. If you are a
             California resident, you may report complaints to the Complaint
             Assistance Unit of the Division of Consumer Product of the
@@ -459,7 +456,7 @@ export default function Terms({ categories }) {
             writing at 400 R Street, Sacramento, CA 95814, or by telephone at
             (800) 952-5210.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Electronic Communications.</strong> The communications
             between you and Company use electronic means, whether you use the
             Site or send us emails, or whether Company posts notices on the Site
@@ -470,7 +467,7 @@ export default function Terms({ categories }) {
             to you electronically satisfy any legal obligation that such
             communications would satisfy if it were be in a hard copy writing.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Entire Terms.</strong> These Terms constitute the entire
             agreement between you and us regarding the use of the Site. Our
             failure to exercise or enforce any right or provision of these Terms
@@ -491,11 +488,11 @@ export default function Terms({ categories }) {
             Company may freely assign these Terms.&nbsp; The terms and
             conditions set forth in these Terms shall be binding upon assignees.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Your Privacy.</strong> Please read our{" "}
             <a href="./privacy-policy">Privacy Policy</a>.
           </p>
-          <p className="my-2">
+          <p>
             <strong>Copyright/Trademark Information.</strong> Copyright ©. All
             rights reserved.&nbsp; All trademarks, logos and service marks
             displayed on the Site are our property or the property of other
@@ -503,11 +500,21 @@ export default function Terms({ categories }) {
             prior written consent or the consent of such third party which may
             own the Marks.
           </p>
-          <h2 className="text-md my-3 font-bold">Contact Information</h2>
-          <p className="my-2">Address: Singapore</p>
-          <p className="my-2">Email: contact@{SITE_META.domain}</p>
+          <h2>Contact Information</h2>
+          <p>Address: Singapore</p>
+          <p>Email: contact@{SITE_META.domain}</p>
         </div>
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps() {
+  // const data = await getLocalData().then((res) => res.data.dataForHome);
+
+  return {
+    props: {
+      // categories,
+    },
+  };
 }

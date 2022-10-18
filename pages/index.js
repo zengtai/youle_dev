@@ -8,7 +8,7 @@ import { ADS_SLOT_ID, ADS_ID } from "../lib/constants";
 
 import { Fragment } from "react";
 
-// import Head from "next/head";
+import Head from "next/head";
 // import Script from "next/script";
 
 export default function Home({ data, categories }) {
@@ -17,13 +17,14 @@ export default function Home({ data, categories }) {
 
   return (
     <>
-      <script
-        id={`gads-init`}
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-        crossOrigin="anonymous"
-      />
-
+      <Head>
+        <script
+          id={`gads-init`}
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+          crossOrigin="anonymous"
+        />
+      </Head>
       <Layout navItems={categories} title={`Home`}>
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
           {data
