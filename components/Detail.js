@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Breadcrumb from "./Breadcrumb";
 import Image from "./Image";
+import { GAME_PATH } from "../lib/constants";
 
 export default function Detail({ data }) {
   const breadcrumbData = { title: data.title, category: data.category };
@@ -31,7 +32,8 @@ export default function Detail({ data }) {
         </div>
       </section>
       <button className="mx-auto flex xl:w-1/4">
-        <Link href={data.url}>
+        {/* <Link href={data.url}> */}
+        <Link href={GAME_PATH + data.appid}>
           <a className="play-button" title={`Play "${data.title}" Now`}>
             Play Now
           </a>
