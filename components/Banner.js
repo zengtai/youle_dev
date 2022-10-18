@@ -18,16 +18,16 @@ const Banner = ({
       // let adsbygoogle = window.adsbygoogle || [];
       // adsbygoogle.push({});
       let scripts = document.querySelectorAll(`.ad_`);
-      console.log(`1 scripts:`, scripts);
+      // console.log(`1 scripts:`, scripts);
       for (let i of scripts) {
-        console.log(i);
+        // console.log(i);
         i.parentNode.removeChild(i);
       }
       // let ads = scripts.filter((i) =>
       //   i.getAttributeNode("id").value.match(/ad_/g)
       // );
       // console.log(ads);
-      console.log(`2 scripts:`, scripts);
+      // console.log(`2 scripts:`, scripts);
     } catch (e) {
       console.error(e);
     }

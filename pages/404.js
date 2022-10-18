@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/Layout";
 
 export default function Custom404({ categories }) {
-  console.log(categories);
+  // console.log(categories);
   return (
     <Layout navItems={categories} title={`404`}>
       <div className="container mx-auto flex h-full justify-center">

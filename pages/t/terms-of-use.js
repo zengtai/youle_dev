@@ -2,7 +2,7 @@ import Layout from "../../components/Layout";
 import { SITE_META } from "../../lib/constants";
 
 export default function Terms({ categories }) {
-  console.log(`categories: `, categories);
+  // console.log(`categories: `, categories);
   return (
     <>
       <Layout title={`Terms of Use`} navItems={categories}>
