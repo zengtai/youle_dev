@@ -91,8 +91,11 @@ main {
 }
 
 .description {
-  @apply relative pb-6 text-sm after:absolute after:bottom-0 after:left-0 after:h-6 after:w-full after:bg-gradient-to-t after:from-white xl:mt-4 xl:ml-36;
+  @apply relative h-24 overflow-y-auto pb-8 text-sm xl:mt-4 xl:ml-36 xl:h-auto;
 }
+/* .description {
+  @apply relative pb-8 text-sm after:absolute after:bottom-0 after:left-0 after:h-8 after:w-full after:bg-gradient-to-t after:from-white after:pt-3 after:text-center xl:mt-4 xl:ml-36;
+} */
 
 .home .section-title {
   @apply my-4 border-l-4 border-l-yellow-300 pl-3 leading-5;
