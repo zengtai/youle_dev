@@ -91,7 +91,7 @@ main {
 }
 
 .description {
-  @apply relative h-24 overflow-y-auto pb-8 text-sm xl:mt-4 xl:ml-36 xl:h-auto;
+  @apply relative h-16 overflow-y-auto pb-8 text-sm xl:mt-4 xl:ml-36 xl:h-auto;
 }
 /* .description {
   @apply relative pb-8 text-sm after:absolute after:bottom-0 after:left-0 after:h-8 after:w-full after:bg-gradient-to-t after:from-white after:pt-3 after:text-center xl:mt-4 xl:ml-36;
