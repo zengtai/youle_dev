@@ -2,11 +2,17 @@ import Link from "next/link";
 import { GAME_PATH } from "../lib/constants";
 import Breadcrumb from "./Breadcrumb";
 import Image from "./Image";
+import { useState } from "react";
 
 export default function Detail({ data }) {
+  const [showAll, setShowAll] = useState(false);
   const breadcrumbData = { title: data.title, category: data.category };
-  console.log(`Detail data: `, data);
+  // console.log(`Detail data: `, data);
   // console.log(`Breadcrumb data: `, breadcrumbData);
+  const handleClick = () => {
+    setShowAll(() => !showAll);
+    console.log(showAll);
+  };
   return (
     <>
       <section className="detail">
@@ -26,7 +32,12 @@ export default function Detail({ data }) {
               <div className="game-rating">{data.rating}</div>
             </div>
           </div>
-          <div className="description text-sm xl:mt-4 xl:ml-36">
+          <div
+            className={`description ${
+              showAll ? `h-auto` : `h-16 overflow-hidden`
+            }`}
+            onClick={handleClick}
+          >
             {data.description}
           </div>
         </div>

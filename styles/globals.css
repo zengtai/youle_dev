@@ -90,6 +90,10 @@ main {
   @apply m-4 text-center text-2xl;
 }
 
+.description {
+  @apply relative pb-6 text-sm after:absolute after:bottom-0 after:left-0 after:h-6 after:w-full after:bg-gradient-to-t after:from-white xl:mt-4 xl:ml-36;
+}
+
 .home .section-title {
   @apply my-4 border-l-4 border-l-yellow-300 pl-3 leading-5;
 }
