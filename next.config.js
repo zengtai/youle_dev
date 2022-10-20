@@ -38,8 +38,8 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
-  // basePath: "/webs/hw2/v1", // 20221018
-  basePath: "/webs/hw2/v1_beta1", // 20221019
+  basePath: "/webs/hw2/v1", // 20221018
+
   // distDir: "build",
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash here
