@@ -11,14 +11,14 @@ export default function Image({ alt, width, height, lazy }) {
   let srcId = alt.replace(/\s/g, "");
   return (
     <picture className="block overflow-hidden rounded-xl shadow-lg">
-      {/* <source
+      <source
         type="image/avif"
         srcSet={`https://cdn.iwantalipstick.com/gameicon2/avif/${srcId}.avif`}
       />
       <source
         type="image/webp"
         srcSet={`https://cdn.iwantalipstick.com/gameicon2/webp/${srcId}.webp`}
-      /> */}
+      />
       <img
         className="aspect-square bg-black/10 bg-loading bg-center bg-no-repeat"
         width={width ? width : "100%"}

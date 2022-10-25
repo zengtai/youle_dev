@@ -59,6 +59,7 @@ const Banner = ({
           {...(devMode || DEV_MODE === true ? { "data-adtest": "on" } : null)}
         />
         <Script
+          class="uptap-ads-google-script"
           id={Math.random()}
           className={`ad_`}
           dangerouslySetInnerHTML={{
@@ -66,6 +67,11 @@ const Banner = ({
               try {
                 (adsbygoogle = window.adsbygoogle || []).push({})
               } catch(e) { console.log(e) }
+
+              var scripts = document.querySelectorAll('.uptap-ads-google-script');
+              for (var i = 0; i < scripts.length-1; i++) {
+                    scripts[i].parentNode.removeChild(scripts[i]);
+              }
             `,
           }}
         />
