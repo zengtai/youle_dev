@@ -8,6 +8,7 @@ import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
 
 // import Script from "next/script";
 import Head from "next/head";
+import Script from "next/script";
 
 export default function Category({ slugs, category, categories }) {
   // console.log(`category`, category);
@@ -17,14 +18,12 @@ export default function Category({ slugs, category, categories }) {
 
   return (
     <>
-      <Head>
-        <script
-          id={`gads-init`}
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-          crossOrigin="anonymous"
-        />
-      </Head>
+      <Script
+        id={`gads-init`}
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+        crossOrigin="anonymous"
+      />
 
       <Layout navItems={categories} title={`${category} Games`}>
         <div className="game-category container mx-auto">

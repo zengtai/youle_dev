@@ -1,4 +1,4 @@
-import Head from "next/head";
+// import Head from "next/head";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
@@ -10,6 +10,7 @@ import Detail from "../../components/Detail";
 // import Script from "next/script";
 
 import Banner from "../../components/Banner";
+import Script from "next/script";
 
 export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`data`, data);
@@ -21,14 +22,13 @@ export default function Game({ data, relatedSlugs, categories }) {
 
   return (
     <>
-      <Head>
-        <script
-          id={`gads-init`}
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-          crossOrigin="anonymous"
-        />
-      </Head>
+      <Script
+        id={`gads-init`}
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+        crossOrigin="anonymous"
+      />
+
       <Layout navItems={categories} title={data.title}>
         <div className="game-detail container mx-auto">
           <div className="flex flex-col xl:my-6 xl:flex-row">
