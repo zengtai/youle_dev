@@ -8,7 +8,7 @@ import NProgress from "nprogress";
 import * as gtag from "../lib/gtag";
 
 import { getLocalData } from "../lib/api";
-import { GA_ID } from "../lib/constants";
+import { GA_ID, GA_ID2 } from "../lib/constants";
 
 import Head from "next/head";
 import "../public/nprogress.css";
@@ -41,12 +41,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        src={ `https://www.googletagmanager.com/gtag/js?id=${GA_ID}` }
       />
       <Script
         id="gtag-init"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={ {
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -54,33 +54,36 @@ function MyApp({ Component, pageProps }) {
             gtag('config', '${GA_ID}', {
               page_path: window.location.pathname,
             });
+            gtag('config', '${GA_ID2}', {
+              page_path: window.location.pathname,
+            });
           `,
-        }}
+        } }
       />
 
       <Head>
         <meta name="google" content="notranslate" />
         <link
           rel="icon"
-          href={`${Router.basePath}/favicon.ico`}
+          href={ `${Router.basePath}/favicon.ico` }
           sizes="16x16"
           type="image/x-icon"
         />
         <link
           rel="icon"
-          href={`${Router.basePath}/favicon.png`}
+          href={ `${Router.basePath}/favicon.png` }
           sizes="16x16 32x32 64x64"
           type="image/png"
         />
         <link
           rel="icon"
-          href={`${Router.basePath}/favicon.svg`}
+          href={ `${Router.basePath}/favicon.svg` }
           sizes="any"
           type="image/svg+xml"
         />
       </Head>
 
-      <Component {...pageProps} />
+      <Component { ...pageProps } />
     </>
   );
 }
