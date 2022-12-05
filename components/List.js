@@ -2,7 +2,7 @@ import ListItem from "./ListItem";
 
 export default function List({ items, className, lazy }) {
   return (
-    <ul className={className ? className : `game-list`}>
+    <ul className={className ? `game-list ${className}` : `game-list`}>
       {items.map((game, index) => (
         <ListItem
           item={game}

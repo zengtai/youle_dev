@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
-import List from "../components/List";
+import Layout from "@/components/Layout";
+import List from "@/components/List";
 import { getListDataBySlugs, getLocalData } from "../lib/api";
 // import Banner from "../components/Banner";
 // import Script from "next/script";
@@ -11,6 +11,8 @@ import Script from "next/script";
 
 export default function AllGames({ slugs, categories }) {
   let data = getListDataBySlugs(slugs);
+  // console.log("🚀 ~ file: all.js:14 ~ AllGames ~ data", data);
+
   // console.log(`Data:`, JSON.stringify(data));
   return (
     <>

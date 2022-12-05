@@ -1,15 +1,15 @@
 // import Head from "next/head";
-import Layout from "../../components/Layout";
-import List from "../../components/List";
-import { getListDataBySlugs, getLocalData } from "../../lib/api";
+import Layout from "@/components/Layout";
+import List from "@/components/List";
+import { getListDataBySlugs, getLocalData } from "@/lib/api";
 
-import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
+import { ADS_SLOT_ID, ADS_ID } from "@/lib/constants";
 
-import Detail from "../../components/Detail";
+import Detail from "@/components/Detail";
 
 // import Script from "next/script";
 
-import Banner from "../../components/Banner";
+import Banner from "@/components/Banner";
 import Script from "next/script";
 
 export default function Game({ data, relatedSlugs, categories }) {

@@ -1,5 +1,5 @@
-import Layout from "../../components/Layout";
-import { SITE_META } from "../../lib/constants";
+import Layout from "@/components/Layout";
+import { SITE_META } from "@/lib/constants";
 
 export default function PrivacyPolicy({ categories }) {
   // console.log(`categories: `, categories);

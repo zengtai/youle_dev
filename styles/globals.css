@@ -225,3 +225,8 @@ main {
 .site-policy p {
   @apply my-2;
 }
+
+/* Error */
+.error {
+  @apply container mx-auto flex h-full justify-center;
+}
