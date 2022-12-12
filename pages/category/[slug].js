@@ -1,7 +1,7 @@
-import Breadcrumb from "../../components/Breadcrumb";
-import Layout from "../../components/Layout";
-import List from "../../components/List";
-import { getListDataBySlugs, getLocalData } from "../../lib/api";
+import Breadcrumb from "@/components/Breadcrumb";
+import Layout from "@/components/Layout";
+import List from "@/components/List";
+import { getListDataBySlugs, getLocalData } from "@/lib/api";
 
 // import Banner from "../../components/Banner";
 // import { ADS_SLOT_ID } from "../../lib/constants";

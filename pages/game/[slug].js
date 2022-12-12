@@ -1,11 +1,11 @@
 // import Head from "next/head";
-import Layout from "../../components/Layout";
-import List from "../../components/List";
-import { getListDataBySlugs, getLocalData } from "../../lib/api";
+import Layout from "@/components/Layout";
+import List from "@/components/List";
+import { getListDataBySlugs, getLocalData } from "@/lib/api";
 
 // import { ADS_SLOT_ID } from "../../lib/constants";
 
-import Detail from "../../components/Detail";
+import Detail from "@/components/Detail";
 import Script from "next/script";
 import Head from "next/head";
 

@@ -7,5 +7,3 @@ Host: https://www.playgames.mobi
 
 # Sitemaps
 Sitemap: https://www.playgames.mobi/sitemap.xml
-
-Disallow: cdn.playgames.mobi

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ADS_ID } from "../lib/constants";
+import { ADS_ID } from "@/lib/constants";
 
 const Banner = ({
   className,

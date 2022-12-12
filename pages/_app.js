@@ -5,14 +5,14 @@ import Script from "next/script";
 
 import NProgress from "nprogress";
 
-import * as gtag from "../lib/gtag";
+import * as gtag from "@/lib/gtag";
 
-import { getLocalData } from "../lib/api";
-import { GA_ID } from "../lib/constants";
+import { getLocalData } from "@/lib/api";
+import { GA_ID } from "@/lib/constants";
 
 import Head from "next/head";
-import "../public/nprogress.css";
-import "../styles/globals.css";
+import "@/styles/nprogress.css";
+import "@/styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const Router = useRouter();

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Layout from "../components/Layout";
-import ListItem from "../components/ListItem";
-import { getLocalData } from "../lib/api";
+import Layout from "@/components/Layout";
+import ListItem from "@/components/ListItem";
+import { getLocalData } from "@/lib/api";
 import Head from "next/head";
 
 // import Banner from "../components/Banner";

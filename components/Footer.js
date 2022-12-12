@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SITE_META } from "../lib/constants";
+import { SITE_META } from "@/lib/constants";
 
 export default function Footer() {
   return (
