@@ -49,7 +49,32 @@ export default function Ad({ width = 300, height = 250 }) {
         throw new Error("Failed to fetch API");
       }
 
+      const report = data?.data?.ads?.[0]?.events;
+
+      // console.log(`report: `, report);
+
+      async function sendReport(report) {
+        const available = report?.available && (await fetch(report?.available));
+        // console.log(`available: `, available);
+        const visible = report?.visible && (await fetch(report?.visible));
+        // console.log(`visible: `, visible);
+        const display =
+          report?.display &&
+          report?.display.forEach(async (i) => {
+            await fetch(i);
+          });
+        // console.log(`display: `, display);
+        const click =
+          report?.click &&
+          report?.click.forEach(async (i) => {
+            await fetch(i);
+          });
+        // console.log(`click: `, click);
+      }
+
       setAdData(data);
+
+      sendReport(report);
     }
 
     fetchAd();
