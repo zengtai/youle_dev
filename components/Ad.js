@@ -64,11 +64,6 @@ export default function Ad({ width = 300, height = 250 }) {
             await fetch(i);
           });
         // console.log(`display: `, display);
-        const click =
-          report?.click &&
-          report?.click.forEach(async (i) => {
-            await fetch(i);
-          });
         // console.log(`click: `, click);
       }
 
@@ -80,11 +75,23 @@ export default function Ad({ width = 300, height = 250 }) {
     fetchAd();
   }, [width, height]);
 
+  const sendClickEvent = async () => {
+    await fetch(adData?.data?.ads?.[0]?.events?.click[0]);
+  };
+
+  const link = adData?.data?.ads?.[0].link;
+
   return (
     <div className="Banner mx-auto max-w-3xl">
       {console.log(`adData: `, adData)}
       <a
-        href={adData?.data?.ads?.[0].link}
+        href={link}
+        onClick={async (e) => {
+          e.preventDefault();
+          await sendClickEvent().then(() => {
+            location.href = link;
+          });
+        }}
         className="flex flex-col justify-center bg-black/5"
       >
         <Image
@@ -97,6 +104,22 @@ export default function Ad({ width = 300, height = 250 }) {
         />
         <div className="mx-4 mb-2">
           <span>{adData?.data?.ads?.[0].title}</span>
+          {adData?.data?.ads?.[0].title ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          ) : null}
         </div>
       </a>
     </div>
