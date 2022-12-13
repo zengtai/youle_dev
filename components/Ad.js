@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Spinner from "../public/images/spinner.svg";
 
 export default function Ad({ width = 300, height = 250 }) {
   const [adData, setAdData] = useState(null);
@@ -43,7 +44,7 @@ export default function Ad({ width = 300, height = 250 }) {
 
       if (data.errors) {
         console.error(json.errors);
-        // throw new Error("Failed to fetch API");
+        throw new Error("Failed to fetch API");
       }
 
       setAdData(data);
@@ -52,23 +53,24 @@ export default function Ad({ width = 300, height = 250 }) {
     fetchAd();
   }, [width, height]);
 
-  const adClass = `w-full object-cover`;
-
   return (
-    <div className="Banner">
+    <div className="Banner mx-auto max-w-3xl">
       {console.log(`adData: `, adData)}
       <a
         href={adData?.data?.ads?.[0].link}
         className="flex flex-col justify-center bg-black/5"
       >
         <Image
-          src={adData?.data?.ads?.[0].images?.[0]}
+          // src={`./images/spinner.svg`}
+          src={adData?.data?.ads?.[0].images?.[0] || Spinner}
           alt={adData?.data?.ads?.[0].title}
           width={width}
           height={height}
-          className={adClass}
+          className="w-full object-contain"
         />
-        <h4 className="mx-4 my-2">{adData?.data?.ads?.[0].title}</h4>
+        <div className="mx-4 mb-2">
+          <span>{adData?.data?.ads?.[0].title}</span>
+        </div>
       </a>
     </div>
   );

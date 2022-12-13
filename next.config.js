@@ -10,6 +10,7 @@ const nextConfig = {
 
   images: {
     unoptimized: true,
+    domains: ["images-dl.taboola.com"],
   },
   reactStrictMode: true,
   compiler: {
