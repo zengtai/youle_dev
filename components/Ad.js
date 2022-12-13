@@ -82,7 +82,7 @@ export default function Ad({ width = 300, height = 250 }) {
   const link = adData?.data?.ads?.[0].link;
 
   return (
-    <div className="Banner mx-auto max-w-3xl">
+    <div className="mx-auto max-w-3xl">
       {console.log(`adData: `, adData)}
       <a
         href={link}
@@ -102,23 +102,25 @@ export default function Ad({ width = 300, height = 250 }) {
           height={height}
           className="w-full object-contain"
         />
-        <div className="mx-4 mb-2">
-          <span>{adData?.data?.ads?.[0].title}</span>
+        <div className="mx-4 my-2 flex items-center gap-x-2">
+          <span className="grow">{adData?.data?.ads?.[0].title}</span>
           {adData?.data?.ads?.[0].title ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="h-6 w-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-              />
-            </svg>
+            <button className="ad-cta">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={3}
+                stroke="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </button>
           ) : null}
         </div>
       </a>
