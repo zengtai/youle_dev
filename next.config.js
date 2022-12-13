@@ -14,7 +14,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production" ? true : false,
+    removeConsole: process.env.NODE_ENV === "development" ? false : true,
   },
   // experimental: {
   //   swcMinifyDebugOptions: {
@@ -45,7 +45,7 @@ const nextConfig = {
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash heren
     // return "20221018";
-    return "20221107";
+    return "20221213";
   },
   async headers() {
     return [

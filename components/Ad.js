@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+
 import Spinner from "../public/images/spinner.svg";
 
 export default function Ad({ width = 300, height = 250 }) {
@@ -28,7 +29,10 @@ export default function Ad({ width = 300, height = 250 }) {
       localStorage.setItem("ms_ad_uuid", uuid);
     }
 
-    const adApi = `http://testdspapi.valuepowered.com/forward/v1/ad`;
+    const adApi =
+      process.env.NODE_ENV === "production"
+        ? `https://dspapi.valuepowered.com/forward/v1/ad`
+        : `http://testdspapi.valuepowered.com/forward/v1/ad`;
     async function fetchAd() {
       const res = await fetch(adApi, {
         method: `POST`,
