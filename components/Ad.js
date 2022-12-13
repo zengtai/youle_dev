@@ -31,7 +31,7 @@ export default function Ad({ width = 300, height = 250 }) {
 
     const adApi =
       process.env.NODE_ENV === "production"
-        ? `https://dspapi.valuepowered.com/forward/v1/ad`
+        ? `https://api.starfavormobi.com/forward/v1/ad`
         : `http://testdspapi.valuepowered.com/forward/v1/ad`;
     async function fetchAd() {
       const res = await fetch(adApi, {
@@ -89,11 +89,11 @@ export default function Ad({ width = 300, height = 250 }) {
     <div className="mx-auto max-w-3xl">
       {console.log(`adData: `, adData)}
       <a
-        href={link}
+        href={link ? link : `#`}
         onClick={async (e) => {
           e.preventDefault();
           await sendClickEvent().then(() => {
-            location.href = link;
+            location.href = link ? link : `#`;
           });
         }}
         className="flex flex-col justify-center bg-black/5"
