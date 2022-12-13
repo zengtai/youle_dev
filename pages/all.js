@@ -14,6 +14,7 @@ import Ad from "@/components/Ad";
 export default function AllGames({ slugs, categories }) {
   let data = getListDataBySlugs(slugs);
   // console.log(`Data:`, JSON.stringify(data));
+  let randomId = Math.random().toFixed(3);
   return (
     <>
       {/* <Script
@@ -26,7 +27,7 @@ export default function AllGames({ slugs, categories }) {
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
-          <Ad key={`all-${Math.random().toFixed(3)}`} />
+          <Ad key={`all-${randomId}`} />
           {/* <Ad2 key={`all-${Math.random()}`} /> */}
           <Breadcrumb item={`All`} />
           <section className="my-8">

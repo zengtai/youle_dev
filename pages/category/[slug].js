@@ -1,3 +1,4 @@
+import Ad from "@/components/Ad";
 import Breadcrumb from "../../components/Breadcrumb";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
@@ -16,6 +17,8 @@ export default function Category({ slugs, category, categories }) {
   let data = getListDataBySlugs(slugs);
   // console.log(`data`, data);
 
+  let randomId = Math.random().toFixed(3);
+
   return (
     <>
       {/* <Script
@@ -28,7 +31,7 @@ export default function Category({ slugs, category, categories }) {
       <Layout navItems={categories} title={`${category} Games`}>
         <div className="game-category container mx-auto">
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
-
+          <Ad key={`category-${randomId}`} />
           <Breadcrumb item={category} />
           {/* <Banner
           className={`banner banner_fw ad-container`}

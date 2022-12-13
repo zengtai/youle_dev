@@ -6,6 +6,7 @@ import { getListDataBySlugs, getLocalData } from "../../lib/api";
 // import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
+import Ad from "@/components/Ad";
 
 // import Script from "next/script";
 
@@ -19,6 +20,8 @@ export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`relatedSlugs`, relatedSlugs);
 
   let related = getListDataBySlugs(relatedSlugs);
+
+  let randomId = Math.random().toFixed(3);
 
   return (
     <>
@@ -41,6 +44,9 @@ export default function Game({ data, relatedSlugs, categories }) {
                   slot={ADS_SLOT_ID.detail}
                   key={Math.random()}
                 /> */}
+                <div className="mt-4">
+                  <Ad key={`detail-${randomId}`} />
+                </div>
               </div>
               <header className="section-title m-4 xl:sr-only">
                 <h2 className="font-bold">You May Also Like</h2>

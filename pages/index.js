@@ -9,7 +9,7 @@ import { getLocalData } from "@/lib/api";
 import Ad from "../components/Ad";
 
 import { Fragment } from "react";
-import Ad_ from "../components/Ad_";
+// import Ad_ from "../components/Ad_";
 
 // import Head from "next/head";
 // import Script from "next/script";
@@ -18,7 +18,7 @@ import Ad_ from "../components/Ad_";
 export default function Home({ data, categories }) {
   // console.log(`data`, data);
   // let tmpData = getListDataBySlugs(slugs);
-
+  let randomId = Math.random().toFixed(3);
   return (
     <>
       {/* <Script
@@ -29,7 +29,7 @@ export default function Home({ data, categories }) {
       /> */}
       <Layout navItems={categories} title={`Home`}>
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
-          <Ad key={`home-${Math.random().toFixed(3)}`} />
+          <Ad key={`home-${randomId}`} />
           {/* <Ad_ key={Math.random()} /> */}
           {data
             .slice()
@@ -66,7 +66,8 @@ export default function Home({ data, categories }) {
                     ) : null}
                   </section>
                   {/* {index == 0 || index == 2 ? (
-                    <Banner auto slot={ADS_SLOT_ID.home} />
+                    // <Banner auto slot={ADS_SLOT_ID.home} />
+                    <Ad key={`home-${index}-${randomId}`} />
                   ) : null} */}
                 </Fragment>
               );

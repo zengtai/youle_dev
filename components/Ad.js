@@ -19,10 +19,12 @@ export default function Ad({ width = 300, height = 250 }) {
       );
     }
 
-    if (localStorage.getItem("ms_ad_uuid") !== undefined) {
+    if (localStorage.getItem("ms_ad_uuid") !== null) {
       uuid = localStorage.getItem("ms_ad_uuid");
+      console.log(`1 uuid: `, uuid);
     } else {
       uuid = guid();
+      console.log(`2 uuid: `, uuid);
       localStorage.setItem("ms_ad_uuid", uuid);
     }
 
