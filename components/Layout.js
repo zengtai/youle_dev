@@ -1,7 +1,7 @@
+import { SITE_META } from "@/lib/constants";
+import Head from "next/head";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Head from "next/head";
-import { SITE_META } from "../lib/constants";
 
 export default function Layout({ navItems, title, children }) {
   return (

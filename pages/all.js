@@ -1,29 +1,33 @@
-import Layout from "../components/Layout";
-import List from "../components/List";
-import { getListDataBySlugs, getLocalData } from "../lib/api";
+import Layout from "@/components/Layout";
+import List from "@/components/List";
+import { getListDataBySlugs, getLocalData } from "@/lib/api";
+// import Banner from "../components/Banner";
+// // import Script from "next/script";
+// import Head from "next/head";
+// import { ADS_SLOT_ID, ADS_ID } from "../lib/constants";
+import Breadcrumb from "@/components/Breadcrumb";
+
+import Ad from "@/components/Ad";
 // import Banner from "../components/Banner";
 // import Script from "next/script";
-import Head from "next/head";
-import { ADS_SLOT_ID, ADS_ID } from "../lib/constants";
-import Breadcrumb from "../components/Breadcrumb";
-import Banner from "../components/Banner";
-import Script from "next/script";
 
 export default function AllGames({ slugs, categories }) {
   let data = getListDataBySlugs(slugs);
   // console.log(`Data:`, JSON.stringify(data));
   return (
     <>
-      <Script
+      {/* <Script
         id={`gads-init`}
         async
         src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
         crossOrigin="anonymous"
-      />
+      /> */}
 
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
-          <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} />
+          {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
+          <Ad key={`all-${Math.random().toFixed(3)}`} />
+          {/* <Ad2 key={`all-${Math.random()}`} /> */}
           <Breadcrumb item={`All`} />
           <section className="my-8">
             {/* <header className="my-3 mx-4 flex items-start gap-2">

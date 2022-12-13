@@ -1,6 +1,6 @@
 // import Image from "next/image";
 import Link from "next/link";
-import { SITE_META } from "../lib/constants";
+import { SITE_META } from "@/lib/constants";
 // import Logo from "../public/logo.png";
 
 export default function Footer() {

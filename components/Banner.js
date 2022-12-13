@@ -1,6 +1,6 @@
 import Script from "next/script";
 import { useEffect } from "react";
-import { ADS_ID, DEV_MODE } from "../lib/constants";
+import { ADS_ID, DEV_MODE } from "@/lib/constants";
 
 const Banner = ({
   className,
@@ -59,7 +59,7 @@ const Banner = ({
           {...(devMode || DEV_MODE === true ? { "data-adtest": "on" } : null)}
         />
         <Script
-          class="uptap-ads-google-script"
+          // class="uptap-ads-google-script"
           id={Math.random()}
           className={`ad_`}
           dangerouslySetInnerHTML={{
@@ -68,10 +68,11 @@ const Banner = ({
                 (adsbygoogle = window.adsbygoogle || []).push({})
               } catch(e) { console.log(e) }
 
+              <!--
               var scripts = document.querySelectorAll('.uptap-ads-google-script');
               for (var i = 0; i < scripts.length-1; i++) {
-                    scripts[i].parentNode.removeChild(scripts[i]);
-              }
+                scripts[i].parentNode.removeChild(scripts[i]);
+              } -->
             `,
           }}
         />

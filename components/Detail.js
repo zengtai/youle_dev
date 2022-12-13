@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GAME_PATH } from "../lib/constants";
+import { GAME_PATH } from "@/lib/constants";
 import Breadcrumb from "./Breadcrumb";
 import Image from "./Image";
 // import { useState } from "react";

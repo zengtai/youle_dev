@@ -3,14 +3,14 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
-import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
+// import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
 
 // import Script from "next/script";
 
-import Banner from "../../components/Banner";
-import Script from "next/script";
+// import Banner from "../../components/Banner";
+// import Script from "next/script";
 
 export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`data`, data);
@@ -22,12 +22,12 @@ export default function Game({ data, relatedSlugs, categories }) {
 
   return (
     <>
-      <Script
+      {/* <Script
         id={`gads-init`}
         async
         src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
         crossOrigin="anonymous"
-      />
+      /> */}
 
       <Layout navItems={categories} title={data.title}>
         <div className="game-detail container mx-auto">
@@ -35,12 +35,12 @@ export default function Game({ data, relatedSlugs, categories }) {
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
                 <Detail data={data} />
-                <Banner
+                {/* <Banner
                   auto
                   // style={{ width: "100%", height: "100%" }}
                   slot={ADS_SLOT_ID.detail}
                   key={Math.random()}
-                />
+                /> */}
               </div>
               <header className="section-title m-4 xl:sr-only">
                 <h2 className="font-bold">You May Also Like</h2>

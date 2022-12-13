@@ -1,25 +1,25 @@
 import Link from "next/link";
+import { useState } from "react";
 import {
-  HomeIcon,
-  MenuIcon,
-  CloseIcon,
-  CategoryIcon,
   ActionIcon,
+  AdventureIcon,
+  ArcadeIcon,
   CasualIcon,
+  CategoryIcon,
+  CloseIcon,
   DefenseIcon,
+  GirlIcon,
+  HomeIcon,
+  IoIcon,
+  Match3Icon,
+  MenuIcon,
   PuzzleIcon,
+  RacingIcon,
   ShootingIcon,
   SimulationIcon,
   SportsIcon,
   StrategyIcon,
-  RacingIcon,
-  ArcadeIcon,
-  AdventureIcon,
-  IoIcon,
-  GirlIcon,
-  Match3Icon,
 } from "./Icons";
-import { useState } from "react";
 
 export default function Navbar({ items }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
