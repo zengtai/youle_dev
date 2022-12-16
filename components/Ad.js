@@ -40,6 +40,7 @@ export default function Ad({ width = 300, height = 250 }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          spaceId: "a1ueklhp9jro",
           deviceId: uuid,
           width: width,
           height: height,
