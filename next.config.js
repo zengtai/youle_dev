@@ -7,9 +7,15 @@ const nextConfig = {
   //   // deviceSizes: [640, 750, 828, 1080, 1200, 1920],
   //   // imageSizes: [96, 128, 256, 384],
   // },
-  images: {
-    unoptimized: true,
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
   },
+  // }
+  // images: {
+  //   unoptimized: true,
+  // },
   reactStrictMode: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production" ? true : false,
