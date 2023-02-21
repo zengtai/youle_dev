@@ -40,7 +40,7 @@ export default function Detail({ data }) {
           </div>
         </div>
       </section>
-      <button className="mx-auto flex xl:w-1/4">
+      <button className="mx-auto mb-8 flex xl:w-1/4">
         {/* <Link href={`/${data.appid}.html`}> */}
         {/* <Link href={data.url}> */}
         <a
