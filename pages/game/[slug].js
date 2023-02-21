@@ -34,13 +34,13 @@ export default function Game({ data, relatedSlugs, categories }) {
           <div className="flex flex-col xl:my-6 xl:flex-row">
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
-                <Detail data={data} />
-                <Banner
+                {/* <Banner
                   auto
                   // style={{ width: "100%", height: "100%" }}
                   slot={ADS_SLOT_ID.detail}
                   key={Math.random()}
-                />
+                /> */}
+                <Detail data={data} />
               </div>
               <header className="section-title m-4 xl:sr-only">
                 <h2 className="font-bold">You May Also Like</h2>

@@ -60,9 +60,9 @@ export default function Home({ data, categories }) {
                       </Link>
                     ) : null}
                   </section>
-                  {index == 0 || index == 2 ? (
+                  {/* {index == 0 || index == 2 ? (
                     <Banner auto slot={ADS_SLOT_ID.home} />
-                  ) : null}
+                  ) : null} */}
                 </Fragment>
               );
             })}
