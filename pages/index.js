@@ -7,7 +7,7 @@ import Head from "next/head";
 // import Banner from "../components/Banner";
 // import { ADS_SLOT_ID } from "../lib/constants";
 import { Fragment } from "react";
-import Script from "next/script";
+// import Script from "next/script";
 
 export default function Home({ data, categories }) {
   // console.log(`data`, data);
@@ -25,11 +25,7 @@ export default function Home({ data, categories }) {
           content={`playgames, play games, instant games, easy game, free online games, casual games, flash games, browser games, free games to play, arcade games, pc games download, online games for pc, best online games, free games for pc, play games online`}
         />
       </Head>
-      <Script
-        async={true}
-        crossOrigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9460854678318351"
-      />
+
       <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
         {data
           .slice()
