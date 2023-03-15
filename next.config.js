@@ -39,13 +39,13 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
-  // basePath: "/gamebox", // 20221018
+  basePath: "/gamebox", // 20221018
   // basePath: "/webs_test/20221018/gostarfavor", // 20221018
   // distDir: "build",
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash here
     // return "20221018";
-    return "20221025";
+    return "20230315";
   },
   async headers() {
     return [
