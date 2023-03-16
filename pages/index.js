@@ -4,7 +4,7 @@ import ListItem from "../components/ListItem";
 import { getLocalData } from "../lib/api";
 
 import Banner from "../components/Banner";
-import { ADS_SLOT_ID, ADS_ID } from "../lib/constants";
+import { ADS_SLOT_ID, ADS_ID, SHOW_AD } from "../lib/constants";
 
 import { Fragment } from "react";
 
@@ -18,12 +18,14 @@ export default function Home({ data, categories }) {
 
   return (
     <>
-      <Script
-        id={`gads-init`}
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-        crossOrigin="anonymous"
-      />
+      {SHOW_AD && (
+        <Script
+          id={`gads-init`}
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+          crossOrigin="anonymous"
+        />
+      )}
       <Layout navItems={categories} title={`Home`}>
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
           {data
@@ -43,11 +45,7 @@ export default function Home({ data, categories }) {
                         .slice()
                         .sort((a, b) => a.title > b.title)
                         .map((item) => (
-                          <ListItem
-                            item={item}
-                            key={item.id}
-                            lazy={index > 2 ? true : false}
-                          />
+                          <ListItem item={item} key={item.id} lazy={index > 2 ? true : false} />
                         ))}
                     </ul>
                     {item.total > 6 ? (
