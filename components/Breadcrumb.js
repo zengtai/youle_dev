@@ -31,10 +31,7 @@ export default function Breadcrumb({ item }) {
     <>
       <ol className="breadcrumb">
         {routes.map((item, index) => (
-          <li
-            key={item.title}
-            className={index < routes.length - 1 ? `breadcrumb-item` : ``}
-          >
+          <li key={item.title} className={index < routes.length - 1 ? `breadcrumb-item` : ``}>
             {item.path !== null ? (
               <Link href={item.path}>
                 <a>{item.title}</a>

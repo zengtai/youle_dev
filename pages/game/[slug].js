@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
-import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
+import { ADS_SLOT_ID, ADS_ID, SHOW_AD } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
 
@@ -22,12 +22,14 @@ export default function Game({ data, relatedSlugs, categories }) {
 
   return (
     <>
-      <Script
-        id={`gads-init`}
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-        crossOrigin="anonymous"
-      />
+      {SHOW_AD && (
+        <Script
+          id={`gads-init`}
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+          crossOrigin="anonymous"
+        />
+      )}
 
       <Layout navItems={categories} title={data.title}>
         <div className="game-detail container mx-auto">
@@ -103,8 +105,7 @@ export async function getStaticProps(ctx) {
     return Math.ceil(Math.random() * 10 * (baseNum > 0 ? baseNum : 1) + 10);
   }
 
-  detail.ratingCount =
-    detail.rating == 0 ? 0 : generateRatingCount(detail.creation_date);
+  detail.ratingCount = detail.rating == 0 ? 0 : generateRatingCount(detail.creation_date);
 
   return {
     props: {
@@ -115,9 +116,7 @@ export async function getStaticProps(ctx) {
 }
 
 export const getStaticPaths = async () => {
-  const slugs = await getLocalData().then((res) =>
-    res.data.basicData.map((item) => item.slug)
-  );
+  const slugs = await getLocalData().then((res) => res.data.basicData.map((item) => item.slug));
 
   return {
     paths: slugs.map((item) => ({
