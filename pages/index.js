@@ -10,6 +10,8 @@ import { Fragment } from "react";
 
 // import Head from "next/head";
 import Script from "next/script";
+import TaboolaScript from "../components/TaboolaScript";
+import TaboolaAd from "../components/TaboolaAd";
 // import Script from "next/script";
 
 export default function Home({ data, categories }) {
@@ -19,15 +21,19 @@ export default function Home({ data, categories }) {
   return (
     <>
       {SHOW_AD && (
-        <Script
-          id={`gads-init`}
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
-          crossOrigin="anonymous"
-        />
+        <>
+          <Script
+            id={`gads-init`}
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
+            crossOrigin="anonymous"
+          />
+        </>
       )}
+      <TaboolaScript />
       <Layout navItems={categories} title={`Home`}>
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
+          <TaboolaAd adKey={`home-${Math.random()}`} />
           {data
             .slice()
             .sort((a, b) => b.total - a.total)

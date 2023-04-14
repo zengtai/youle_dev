@@ -225,3 +225,7 @@ main {
 .site-policy p {
   @apply my-2;
 }
+
+.thumbnails_350x250 {
+  @apply mx-auto bg-white;
+}

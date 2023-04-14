@@ -11,6 +11,8 @@ import Detail from "../../components/Detail";
 
 import Banner from "../../components/Banner";
 import Script from "next/script";
+import TaboolaScript from "../../components/TaboolaScript";
+import TaboolaAd from "../../components/TaboolaAd";
 
 export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`data`, data);
@@ -30,12 +32,13 @@ export default function Game({ data, relatedSlugs, categories }) {
           crossOrigin="anonymous"
         />
       )}
-
+      <TaboolaScript />
       <Layout navItems={categories} title={data.title}>
         <div className="game-detail container mx-auto">
           <div className="flex flex-col xl:my-6 xl:flex-row">
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
+                <TaboolaAd adKey={`game-${Math.random()}`} />
                 {/* <Banner
                   auto
                   // style={{ width: "100%", height: "100%" }}

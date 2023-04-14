@@ -9,6 +9,8 @@ import { ADS_SLOT_ID, ADS_ID, SHOW_AD } from "../../lib/constants";
 // import Script from "next/script";
 import Head from "next/head";
 import Script from "next/script";
+import TaboolaScript from "../../components/TaboolaScript";
+import TaboolaAd from "../../components/TaboolaAd";
 
 export default function Category({ slugs, category, categories }) {
   // console.log(`category`, category);
@@ -26,10 +28,11 @@ export default function Category({ slugs, category, categories }) {
           crossOrigin="anonymous"
         />
       )}
+      <TaboolaScript />
       <Layout navItems={categories} title={`${category} Games`}>
         <div className="game-category container mx-auto">
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
-
+          <TaboolaAd adKey={`category-${Math.random()}`} />
           <Breadcrumb item={category} />
           {/* <Banner
           className={`banner banner_fw ad-container`}

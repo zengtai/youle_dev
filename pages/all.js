@@ -8,6 +8,8 @@ import { ADS_SLOT_ID, ADS_ID, SHOW_AD } from "../lib/constants";
 import Breadcrumb from "../components/Breadcrumb";
 import Banner from "../components/Banner";
 import Script from "next/script";
+import TaboolaScript from "../components/TaboolaScript";
+import TaboolaAd from "../components/TaboolaAd";
 
 export default function AllGames({ slugs, categories }) {
   let data = getListDataBySlugs(slugs);
@@ -22,10 +24,11 @@ export default function AllGames({ slugs, categories }) {
           crossOrigin="anonymous"
         />
       )}
-
+      <TaboolaScript />
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
-          <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} />
+          <TaboolaAd adKey={`all-${Math.random()}`} />
+          {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
           <Breadcrumb item={`All`} />
           <section className="my-8">
             {/* <header className="my-3 mx-4 flex items-start gap-2">
