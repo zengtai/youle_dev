@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GAME_PATH } from "../lib/constants";
 import Breadcrumb from "./Breadcrumb";
 import Image from "./Image";
+import getGameUrl from "../utils/getGameUrl";
 // import { useState } from "react";
 
 export default function Detail({ data }) {
@@ -44,7 +45,7 @@ export default function Detail({ data }) {
         {/* <Link href={`/${data.appid}.html`}> */}
         {/* <Link href={data.url}> */}
         <a
-          href={GAME_PATH + data.appid}
+          href={`${getGameUrl(data.appid)}`}
           className="play-button"
           title={`Play "${data.title}" Now`}
         >

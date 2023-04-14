@@ -32,7 +32,7 @@ export default function Category({ slugs, category, categories }) {
       <Layout navItems={categories} title={`${category} Games`}>
         <div className="game-category container mx-auto">
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
-          <TaboolaAd adKey={`category-${Math.random()}`} />
+          <TaboolaAd key={Math.random()} adKey={`category-${category}`} />
           <Breadcrumb item={category} />
           {/* <Banner
           className={`banner banner_fw ad-container`}

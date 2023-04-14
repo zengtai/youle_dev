@@ -41,10 +41,11 @@ export default function TaboolaAd({ adKey }) {
         }
       }
     }
+
     return () => {
       taboolaPush({ flush: true });
     };
-  }, [router, adKey]);
+  }, [adKey]);
 
   return (
     <>
