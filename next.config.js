@@ -16,14 +16,6 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production" ? true : false,
   },
-  // experimental: {
-  //   swcMinifyDebugOptions: {
-  //     compress: {
-  //       defaults: true,
-  //       side_effects: false,
-  //     },
-  //   },
-  // },
   swcMinify: true,
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -39,27 +31,26 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
-  // basePath: "/gamebox", // 20221018
+  basePath: "/webs/mcy/v1", // 20230525
   // basePath: "/webs_test/20221018/gostarfavor", // 20221018
   // distDir: "build",
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash here
-    // return "20221018";
-    return "20221025";
+    return "20230525";
   },
-  async headers() {
-    return [
-      {
-        source: "/",
-        headers: [
-          {
-            key: "SameSite",
-            value: "None; Secure",
-          },
-        ],
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: "/",
+  //       headers: [
+  //         {
+  //           key: "SameSite",
+  //           value: "None; Secure",
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;

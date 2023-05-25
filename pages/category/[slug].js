@@ -29,7 +29,7 @@ export default function Category({ slugs, category, categories }) {
 
       <Layout navItems={categories} title={`${category} Games`}>
         <div className="game-category container mx-auto">
-          {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
+          <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} />
 
           <Breadcrumb item={category} />
           {/* <Banner
