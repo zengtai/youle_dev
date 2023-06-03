@@ -24,10 +24,10 @@ export default function AllGames({ slugs, categories }) {
           crossOrigin="anonymous"
         />
       )}
-      <TaboolaScript />
+      {/* <TaboolaScript /> */}
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
-          <TaboolaAd key={Math.random()} adKey={`all}`} />
+          {/* <TaboolaAd key={Math.random()} adKey={`all}`} /> */}
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
           <Breadcrumb item={`All`} />
           <section className="my-8">
