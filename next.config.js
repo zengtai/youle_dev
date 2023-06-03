@@ -45,7 +45,7 @@ const nextConfig = {
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash here
     // return "20221018";
-    return "20230315";
+    return "20230603";
   },
   async headers() {
     return [
