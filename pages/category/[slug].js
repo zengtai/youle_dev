@@ -3,6 +3,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
+import Ad20231010 from "@/components/Ad20231010";
 
 // import Banner from "../../components/Banner";
 // import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
@@ -31,7 +32,8 @@ export default function Category({ slugs, category, categories }) {
       <Layout navItems={categories} title={`${category} Games`}>
         <div className="game-category container mx-auto">
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
-          <Ad key={`category-${randomId}`} />
+          {/* <Ad key={`category-${randomId}`} /> */}
+          <Ad20231010 key={`category-${randomId}`} />
           <Breadcrumb item={category} />
           {/* <Banner
           className={`banner banner_fw ad-container`}

@@ -9,6 +9,7 @@ import { getLocalData } from "@/lib/api";
 import Ad from "../components/Ad";
 
 import { Fragment } from "react";
+import Ad20231010 from "@/components/Ad20231010";
 // import Ad_ from "../components/Ad_";
 
 // import Head from "next/head";
@@ -29,7 +30,8 @@ export default function Home({ data, categories }) {
       /> */}
       <Layout navItems={categories} title={`Home`}>
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
-          <Ad key={`home-${randomId}`} />
+          {/* <Ad key={ `home-${randomId}` } /> */}
+          <Ad20231010 key={`home-${randomId}`} />
           {/* <Ad_ key={Math.random()} /> */}
           {data
             .slice()
@@ -48,11 +50,7 @@ export default function Home({ data, categories }) {
                         .slice()
                         .sort((a, b) => a.title > b.title)
                         .map((item) => (
-                          <ListItem
-                            item={item}
-                            key={item.id}
-                            lazy={index > 2 ? true : false}
-                          />
+                          <ListItem item={item} key={item.id} lazy={index > 2 ? true : false} />
                         ))}
                     </ul>
                     {item.total > 6 ? (

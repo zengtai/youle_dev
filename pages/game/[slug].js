@@ -7,6 +7,7 @@ import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
 import Detail from "../../components/Detail";
 import Ad from "@/components/Ad";
+import Ad20231010 from "@/components/Ad20231010";
 
 // import Script from "next/script";
 
@@ -45,7 +46,8 @@ export default function Game({ data, relatedSlugs, categories }) {
                   key={Math.random()}
                 /> */}
                 <div className="mt-4">
-                  <Ad key={`detail-${randomId}`} />
+                  {/* <Ad key={ `detail-${randomId}` } /> */}
+                  <Ad20231010 key={`detail-${randomId}`} />
                 </div>
               </div>
               <header className="section-title m-4 xl:sr-only">
@@ -109,8 +111,7 @@ export async function getStaticProps(ctx) {
     return Math.ceil(Math.random() * 10 * (baseNum > 0 ? baseNum : 1) + 10);
   }
 
-  detail.ratingCount =
-    detail.rating == 0 ? 0 : generateRatingCount(detail.creation_date);
+  detail.ratingCount = detail.rating == 0 ? 0 : generateRatingCount(detail.creation_date);
 
   return {
     props: {
@@ -121,9 +122,7 @@ export async function getStaticProps(ctx) {
 }
 
 export const getStaticPaths = async () => {
-  const slugs = await getLocalData().then((res) =>
-    res.data.basicData.map((item) => item.slug)
-  );
+  const slugs = await getLocalData().then((res) => res.data.basicData.map((item) => item.slug));
 
   return {
     paths: slugs.map((item) => ({

@@ -41,12 +41,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Script
         strategy="afterInteractive"
-        src={ `https://www.googletagmanager.com/gtag/js?id=${GA_ID}` }
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
       />
       <Script
         id="gtag-init"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={ {
+        dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -58,32 +58,32 @@ function MyApp({ Component, pageProps }) {
               page_path: window.location.pathname,
             });
           `,
-        } }
+        }}
       />
-
+      <Script
+        id="ad2-init"
+        async
+        src={`https://jsc.mgid.com/g/o/gostarfavor.com.1533387.js`}
+        strategy={`beforeInteractive`}
+      />
       <Head>
         <meta name="google" content="notranslate" />
         <link
           rel="icon"
-          href={ `${Router.basePath}/favicon.ico` }
+          href={`${Router.basePath}/favicon.ico`}
           sizes="16x16"
           type="image/x-icon"
         />
         <link
           rel="icon"
-          href={ `${Router.basePath}/favicon.png` }
+          href={`${Router.basePath}/favicon.png`}
           sizes="16x16 32x32 64x64"
           type="image/png"
         />
-        <link
-          rel="icon"
-          href={ `${Router.basePath}/favicon.svg` }
-          sizes="any"
-          type="image/svg+xml"
-        />
+        <link rel="icon" href={`${Router.basePath}/favicon.svg`} sizes="any" type="image/svg+xml" />
       </Head>
 
-      <Component { ...pageProps } />
+      <Component {...pageProps} />
     </>
   );
 }
