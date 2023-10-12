@@ -46,7 +46,7 @@ const nextConfig = {
     // You can, for example, get the latest git commit hash heren
     // return "20221018";
     // return "20221216";
-    return "20231010";
+    return "20231012";
   },
 };
 
