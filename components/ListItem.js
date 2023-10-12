@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "./Image";
+import { SITE_META } from "@/lib/constants";
 
 export default function ListItem({ item, index, lazy }) {
+  const baseURL = SITE_META.baseURL;
   function handleIndex(index) {
     switch (index) {
       // case 2:
@@ -20,7 +22,7 @@ export default function ListItem({ item, index, lazy }) {
   return (
     <>
       <li className={`${handleIndex(index)}`}>
-        <Link href={`/game/${item.slug}`}>
+        <Link href={`${baseURL}/game/${item.slug}`}>
           <a title={item.title}>
             <Image alt={item.title} lazy={lazy} />
             <div className="list-item-meta">

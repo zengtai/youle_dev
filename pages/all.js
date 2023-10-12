@@ -7,7 +7,8 @@ import { getListDataBySlugs, getLocalData } from "@/lib/api";
 // import { ADS_SLOT_ID, ADS_ID } from "../lib/constants";
 import Breadcrumb from "@/components/Breadcrumb";
 
-import Ad from "@/components/Ad";
+// import Ad from "@/components/Ad";
+import Ad20231010 from "@/components/Ad20231010";
 // import Banner from "../components/Banner";
 // import Script from "next/script";
 
@@ -27,8 +28,9 @@ export default function AllGames({ slugs, categories }) {
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
-          <Ad key={`all-${randomId}`} />
-          {/* <Ad2 key={`all-${Math.random()}`} /> */}
+          {/* <Ad key={ `all-${randomId}` } /> */}
+
+          <Ad20231010 key={`all-${randomId}`} />
           <Breadcrumb item={`All`} />
           <section className="my-8">
             {/* <header className="my-3 mx-4 flex items-start gap-2">

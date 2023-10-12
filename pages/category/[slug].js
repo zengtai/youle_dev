@@ -1,4 +1,5 @@
-import Ad from "@/components/Ad";
+// import Ad from "@/components/Ad";
+import Script from "next/script";
 import Breadcrumb from "../../components/Breadcrumb";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
@@ -34,6 +35,7 @@ export default function Category({ slugs, category, categories }) {
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
           {/* <Ad key={`category-${randomId}`} /> */}
           <Ad20231010 key={`category-${randomId}`} />
+
           <Breadcrumb item={category} />
           {/* <Banner
           className={`banner banner_fw ad-container`}

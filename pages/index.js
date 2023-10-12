@@ -2,11 +2,12 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import ListItem from "@/components/ListItem";
 import { getLocalData } from "@/lib/api";
+import { SITE_META } from "@/lib/constants";
 
 // import Banner from "../components/Banner";
 // import { ADS_SLOT_ID, ADS_ID } from "../lib/constants";
 
-import Ad from "../components/Ad";
+// import Ad from "../components/Ad";
 
 import { Fragment } from "react";
 import Ad20231010 from "@/components/Ad20231010";
@@ -32,6 +33,7 @@ export default function Home({ data, categories }) {
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
           {/* <Ad key={ `home-${randomId}` } /> */}
           <Ad20231010 key={`home-${randomId}`} />
+
           {/* <Ad_ key={Math.random()} /> */}
           {data
             .slice()
@@ -54,7 +56,7 @@ export default function Home({ data, categories }) {
                         ))}
                     </ul>
                     {item.total > 6 ? (
-                      <Link href={`/category/${item.category.slug}`}>
+                      <Link href={`${SITE_META.baseURL}/category/${item.category.slug}`}>
                         <a>
                           <div className="more-link">
                             <span className="uppercase">&nbsp;More</span>

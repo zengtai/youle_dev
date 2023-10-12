@@ -1,3 +1,4 @@
+import { SITE_META } from "@/lib/constants";
 import Link from "next/link";
 
 export default function Breadcrumb({ item }) {
@@ -5,11 +6,11 @@ export default function Breadcrumb({ item }) {
   const routes = item.title
     ? [
         {
-          path: `/`,
+          path: `${SITE_META.baseURL}/`,
           title: `Home`,
         },
         {
-          path: `/category/${item.category.slug}/`,
+          path: `${SITE_META.baseURL}/category/${item.category.slug}/`,
           title: `${item.category.name}`,
         },
         {
@@ -19,7 +20,7 @@ export default function Breadcrumb({ item }) {
       ]
     : [
         {
-          path: `/`,
+          path: `${SITE_META.baseURL}/`,
           title: `Home`,
         },
         {
@@ -31,10 +32,7 @@ export default function Breadcrumb({ item }) {
     <>
       <ol className="breadcrumb">
         {routes.map((item, index) => (
-          <li
-            key={item.title}
-            className={index < routes.length - 1 ? `breadcrumb-item` : ``}
-          >
+          <li key={item.title} className={index < routes.length - 1 ? `breadcrumb-item` : ``}>
             {item.path !== null ? (
               <Link href={item.path}>
                 <a>{item.title}</a>

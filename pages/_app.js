@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
 import Script from "next/script";
@@ -12,10 +12,11 @@ import { GA_ID, GA_ID2 } from "../lib/constants";
 
 import Head from "next/head";
 import "../public/nprogress.css";
-import "../styles/globals.css";
+import "../styles/global.css";
 
 function MyApp({ Component, pageProps }) {
   const Router = useRouter();
+
   useEffect(() => {
     const handleRouteStart = (url) => {
       console.log(`Loading: ${url}`);
@@ -60,12 +61,7 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <Script
-        id="ad2-init"
-        async
-        src={`https://jsc.mgid.com/g/o/gostarfavor.com.1533387.js`}
-        strategy={`beforeInteractive`}
-      />
+
       <Head>
         <meta name="google" content="notranslate" />
         <link

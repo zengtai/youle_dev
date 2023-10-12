@@ -6,7 +6,7 @@ import { getListDataBySlugs, getLocalData } from "../../lib/api";
 // import { ADS_SLOT_ID, ADS_ID } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
-import Ad from "@/components/Ad";
+// import Ad from "@/components/Ad";
 import Ad20231010 from "@/components/Ad20231010";
 
 // import Script from "next/script";

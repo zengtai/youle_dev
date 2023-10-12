@@ -20,6 +20,7 @@ import {
   SportsIcon,
   StrategyIcon,
 } from "./Icons";
+import { SITE_META } from "@/lib/constants";
 
 export default function Navbar({ items }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,7 +67,7 @@ export default function Navbar({ items }) {
     <>
       <header className="site-header">
         <nav className="navbar">
-          <Link href={`/`}>
+          <Link href={`${SITE_META.baseURL}/`}>
             <a className="navbar-brand">{HomeIcon(`icon-home`)}</a>
           </Link>
           <button onClick={toggle} className="navbar-toggler">
@@ -78,7 +79,7 @@ export default function Navbar({ items }) {
             } navbar-nav`}
           >
             <li>
-              <Link href={`/all`}>
+              <Link href={`${SITE_META.baseURL}/all`}>
                 <a className="flex gap-1">
                   <span>{CategoryIcon(`text-blue-500`)}</span>All
                 </a>
@@ -86,7 +87,7 @@ export default function Navbar({ items }) {
             </li>
             {items.map((item) => (
               <li key={item.slug}>
-                <Link href={`/category/${item.slug}`}>
+                <Link href={`${SITE_META.baseURL}/category/${item.slug}`}>
                   <a className="flex items-center gap-1">
                     <span>{getIcon(`${item.name}`)}</span>
                     {item.name}
