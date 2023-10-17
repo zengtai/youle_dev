@@ -1,5 +1,0 @@
-# adsense 22.10.20
-google.com, pub-5169204310778296, DIRECT, f08c47fec0942fa0
-
-# adsense 22.10.21 fix
-google.com, pub-2270136017335510, DIRECT, f08c47fec0942fa0

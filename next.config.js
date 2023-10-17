@@ -38,25 +38,25 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
-  // basePath: "/webs/youle",
+  basePath: "/webs/uptapin_zx/v1",
   // distDir: "build",
-  // generateBuildId: async () => {
-  //   // You can, for example, get the latest git commit hash here
-  //   return "20220719";
-  // },
-  async headers() {
-    return [
-      {
-        source: "/",
-        headers: [
-          {
-            key: "SameSite",
-            value: "None; Secure",
-          },
-        ],
-      },
-    ];
+  generateBuildId: async () => {
+    // You can, for example, get the latest git commit hash here
+    return "20231017";
   },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: "/",
+  //       headers: [
+  //         {
+  //           key: "SameSite",
+  //           value: "None; Secure",
+  //         },
+  //       ],
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;

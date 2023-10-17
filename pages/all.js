@@ -40,7 +40,7 @@ export default function AllGames({
 }
 
 export async function getStaticProps() {
-  const data = await getLocalData().then((res) => res.data);
+  const data = await getLocalData().then((res) => res?.data);
   // const data = await getLocalData().then((res) => res.data.basicData);
   const slugs = data.basicData.map((item) => item.slug);
 

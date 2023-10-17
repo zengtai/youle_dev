@@ -1,4 +1,5 @@
-import Image from "next/image";
+// import Image from "next/image";
+import Link from "next/link";
 import { SITE_META } from "../lib/constants";
 
 export default function Footer() {
@@ -6,20 +7,10 @@ export default function Footer() {
     <>
       <footer className="site-footer">
         <nav className="site-footer-nav">
-          <a href={`/t/privacy-policy`}>Privacy Policy</a>
-          <a href={`/t/terms-of-use`}>Terms of Use</a>
+          <Link href={`/t/privacy-policy`}>Privacy Policy</Link>
+          <Link href={`/t/terms-of-use`}>Terms of Use</Link>
         </nav>
-        <div className="my-4 w-32 opacity-50">
-          <Image
-            className="h-12 w-auto"
-            src={`/logo.png`}
-            layout="responsive"
-            alt={SITE_META.name}
-            width={220}
-            height={80}
-          />
-        </div>
-        <p>
+        <p className="mt-4">
           {`© ${new Date().getFullYear()} ${SITE_META.name}. All
           Rights Reserved.`}
         </p>
