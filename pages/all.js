@@ -1,8 +1,8 @@
 import Layout from "../components/Layout";
 import List from "../components/List";
 import { getListDataBySlugs, getLocalData } from "../lib/api";
-// import Banner from "../components/Banner";
-// import { ADS_SLOT_ID } from "../lib/constants";
+import Banner from "../components/Banner";
+import { ADS_SLOT_ID } from "../lib/constants";
 import Breadcrumb from "../components/Breadcrumb";
 
 export default function AllGames({
@@ -24,13 +24,13 @@ export default function AllGames({
               {data.length}
             </span>
           </header> */}
-            {/* <Banner
+            <Banner
               className={`banner banner_fw ad-container mb-8`}
               style={{ display: "block", height: "100%" }}
               slot={ADS_SLOT_ID.category}
               responsive="false"
               key={Math.random()}
-            /> */}
+            />
             <List items={data} />
           </section>
         </div>

@@ -16,6 +16,7 @@ class MyDocument extends Document {
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
             crossOrigin="anonymous"
           />
+          <meta name="generator" content={`${new Date().toDateString()}`} />
         </Head>
         <body>
           <Main />

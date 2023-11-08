@@ -3,13 +3,13 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { getListDataBySlugs, getLocalData } from "../../lib/api";
 
-// import { ADS_SLOT_ID } from "../../lib/constants";
+import { ADS_SLOT_ID } from "../../lib/constants";
 
 import Detail from "../../components/Detail";
 import Script from "next/script";
 import Head from "next/head";
 
-// import Banner from "../../components/Banner";
+import Banner from "../../components/Banner";
 
 export default function Game({ data, relatedSlugs, categories }) {
   // console.log(`data`, data);
@@ -66,7 +66,7 @@ export default function Game({ data, relatedSlugs, categories }) {
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
                 <Detail data={data} />
-                {/* <Banner
+                <Banner
                   className={`banner ad-container text-center`}
                   style={{
                     display: "inline-block",
@@ -77,7 +77,7 @@ export default function Game({ data, relatedSlugs, categories }) {
                   slot={ADS_SLOT_ID.detail}
                   responsive="false"
                   key={Math.random()}
-                /> */}
+                />
               </div>
               <header className="section-title m-4 xl:sr-only">
                 <h2 className="font-bold">You May Also Like</h2>
@@ -140,8 +140,7 @@ export async function getStaticProps(ctx) {
     return Math.ceil(Math.random() * 10 * (baseNum > 0 ? baseNum : 1) + 10);
   }
 
-  detail.ratingCount =
-    detail.rating == 0 ? 0 : generateRatingCount(detail.creation_date);
+  detail.ratingCount = detail.rating == 0 ? 0 : generateRatingCount(detail.creation_date);
 
   return {
     props: {
@@ -152,9 +151,7 @@ export async function getStaticProps(ctx) {
 }
 
 export const getStaticPaths = async () => {
-  const slugs = await getLocalData().then((res) =>
-    res.data.basicData.map((item) => item.slug)
-  );
+  const slugs = await getLocalData().then((res) => res.data.basicData.map((item) => item.slug));
 
   return {
     paths: slugs.map((item) => ({
