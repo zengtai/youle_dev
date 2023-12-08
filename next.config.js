@@ -39,7 +39,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
-  basePath: "/gamezone", // 20231208
+  basePath: "/gameroom", // 20231208
   // basePath: "/gamebox", // 20221018
   // basePath: "/webs_test/20221018/gostarfavor", // 20221018
   // distDir: "build",
