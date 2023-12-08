@@ -30,10 +30,10 @@ export default function Home({ data, categories }) {
           />
         </>
       )}
-      <TaboolaScript />
+      {SHOW_AD && <TaboolaScript />}
       <Layout navItems={categories} title={`Home`}>
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">
-          <TaboolaAd key={Math.random()} adKey={`home`} />
+          {SHOW_AD && <TaboolaAd key={Math.random()} adKey={`home`} />}
           {data
             .slice()
             .sort((a, b) => b.total - a.total)
