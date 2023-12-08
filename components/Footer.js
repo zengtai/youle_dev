@@ -45,8 +45,8 @@ export default function Footer() {
               />
             </svg>
           </span>
-          <a className="underline" href="mailto:contact@gostarfavor.com">
-            contact@gostarfavor.com
+          <a className="underline" href={`mailto:contact@${SITE_META.domain}`}>
+            {`contact@${SITE_META.domain}`}
           </a>
         </div>
       </footer>
