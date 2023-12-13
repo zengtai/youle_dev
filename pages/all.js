@@ -16,18 +16,18 @@ export default function AllGames({ slugs, categories }) {
   // console.log(`Data:`, JSON.stringify(data));
   return (
     <>
-      {SHOW_AD && (
+      {/* {SHOW_AD && (
         <Script
           id={`gads-init`}
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
           crossOrigin="anonymous"
         />
-      )}
-      {/* <TaboolaScript /> */}
+      )} */}
+      <TaboolaScript />
       <Layout navItems={categories} title={`All Games`}>
         <div className="all-games container mx-auto">
-          {/* <TaboolaAd key={Math.random()} adKey={`all}`} /> */}
+          <TaboolaAd key={Math.random()} adKey={`all}`} />
           {/* <Banner auto slot={ADS_SLOT_ID.category} key={Math.random()} /> */}
           <Breadcrumb item={`All`} />
           <section className="my-8">

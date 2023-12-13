@@ -24,21 +24,21 @@ export default function Game({ data, relatedSlugs, categories }) {
 
   return (
     <>
-      {SHOW_AD && (
+      {/* {SHOW_AD && (
         <Script
           id={`gads-init`}
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_ID}`}
           crossOrigin="anonymous"
         />
-      )}
-      {/* <TaboolaScript /> */}
+      )} */}
+      <TaboolaScript />
       <Layout navItems={categories} title={data.title}>
         <div className="game-detail container mx-auto">
           <div className="flex flex-col xl:my-6 xl:flex-row">
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
-                {/* <TaboolaAd key={Math.random()} adKey={`game-${Math.random()}`} /> */}
+                <TaboolaAd key={Math.random()} adKey={`game-${Math.random()}`} />
                 {/* <Banner
                   auto
                   // style={{ width: "100%", height: "100%" }}
