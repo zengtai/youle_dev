@@ -45,7 +45,8 @@ const nextConfig = {
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash here
     // return "20221018";
-    return "20230603";
+    // return "20230603";
+    return "20231213"; // 修复了首页的广告
   },
   async headers() {
     return [
