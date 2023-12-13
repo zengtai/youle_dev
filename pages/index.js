@@ -20,7 +20,7 @@ export default function Home({ data, categories }) {
 
   return (
     <>
-      {SHOW_AD && (
+      {/* {SHOW_AD && (
         <>
           <Script
             id={`gads-init`}
@@ -29,7 +29,7 @@ export default function Home({ data, categories }) {
             crossOrigin="anonymous"
           />
         </>
-      )}
+      )} */}
       {SHOW_AD && <TaboolaScript />}
       <Layout navItems={categories} title={`Home`}>
         <div className="home container mx-auto mb-8 grid xl:grid-cols-4">

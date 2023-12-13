@@ -1,6 +1,6 @@
 // import Script from "next/script";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 // const taboolaObj = {
 //   mode: "thumbnails_350x250",
@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 // };
 
 export default function TaboolaAd({ adKey }) {
-  const router = useRouter();
+  // const router = useRouter();
 
   function taboolaPush(taboolaObj) {
     try {

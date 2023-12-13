@@ -39,7 +39,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   // assetPrefix: `./`,
-  basePath: "/gamezone", // 20231208
+  basePath: "/tihu", // 20231212
   // basePath: "/gamebox", // 20221018
   // basePath: "/webs_test/20221018/gostarfavor", // 20221018
   // distDir: "build",
@@ -47,7 +47,7 @@ const nextConfig = {
     // You can, for example, get the latest git commit hash here
     // return "20221018";
     // return "20230603";
-    return "20231208";
+    return "20231213";
   },
   async headers() {
     return [
