@@ -47,7 +47,8 @@ const nextConfig = {
     // You can, for example, get the latest git commit hash here
     // return "20221018";
     // return "20230603";
-    return "20231213";
+    // return "20231213";
+    return "20231215";
   },
   async headers() {
     return [
