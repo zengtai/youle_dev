@@ -29,7 +29,7 @@ export default function TaboolaAd({ adKey }) {
         try {
           let _taboola = window._taboola || [];
           _taboola.push({
-            mode: "thumbnails_350x250",
+            mode: "thumbnails-350x250",
             container: "taboola-mid-article-thumbnails-300x250",
             placement: `${adKey}`,
             target_type: "mix",
