@@ -40,7 +40,7 @@ export default function TaboolaScript() {
     })(
       document.createElement("script"),
       document.getElementsByTagName("script")[0],
-      "//cdn.taboola.com/libtrc/messagecube-gamebox/loader.js",
+      "//cdn.taboola.com/libtrc/messagecube-starfavor/loader.js",
       "tb_loader_script"
     );
     if (window.performance && typeof window.performance.mark == "function") {
