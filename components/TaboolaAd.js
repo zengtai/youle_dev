@@ -51,7 +51,7 @@ export default function TaboolaAd({ adKey }) {
   return (
     <>
       <div className="mb-2">
-        <div id="taboola-mid-article-thumbnails-300x250"></div>
+        <div id="taboola-mid-article-thumbnails-300x250" className="text-center"></div>
       </div>
       {/* <Script
         id="taboola-ad"

@@ -226,6 +226,6 @@ main {
   @apply my-2;
 }
 
-.thumbnails_350x250 {
+.thumbnails-300x250 {
   @apply mx-auto bg-white;
 }
