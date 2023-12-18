@@ -23,14 +23,14 @@ export default function TaboolaAd({ adKey }) {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      let taboolaContainer = document.getElementById("taboola-mid-article-thumbnails");
+      let taboolaContainer = document.getElementById("taboola-mid-article-thumbnails-300x250");
       if (taboolaContainer) {
         taboolaContainer.innerHTML = "";
         try {
           let _taboola = window._taboola || [];
           _taboola.push({
             mode: "thumbnails_350x250",
-            container: "taboola-mid-article-thumbnails",
+            container: "taboola-mid-article-thumbnails-300x250",
             placement: `${adKey}`,
             target_type: "mix",
           });
@@ -50,7 +50,7 @@ export default function TaboolaAd({ adKey }) {
   return (
     <>
       <div className="mb-2">
-        <div id="taboola-mid-article-thumbnails"></div>
+        <div id="taboola-mid-article-thumbnails-300x250"></div>
       </div>
       {/* <Script
         id="taboola-ad"

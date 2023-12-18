@@ -48,7 +48,8 @@ const nextConfig = {
     // return "20221018";
     // return "20230603";
     // return "20231213";
-    return "20231215";
+    // return "20231215";
+    return "20231218";
   },
   async headers() {
     return [
