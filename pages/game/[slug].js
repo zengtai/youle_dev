@@ -9,8 +9,8 @@ import Detail from "../../components/Detail";
 
 // import Script from "next/script";
 
-import Banner from "../../components/Banner";
-import Script from "next/script";
+// import Banner from "../../components/Banner";
+// import Script from "next/script";
 import TaboolaScript from "../../components/TaboolaScript";
 import TaboolaAd from "../../components/TaboolaAd";
 
@@ -38,7 +38,7 @@ export default function Game({ data, relatedSlugs, categories }) {
           <div className="flex flex-col xl:my-6 xl:flex-row">
             <div className="mx-auto max-w-4xl grow xl:order-2 xl:flex xl:flex-col xl:justify-between">
               <div>
-                <TaboolaAd key={Math.random()} adKey={`game-${Math.random()}`} />
+                <TaboolaAd key={Math.random()} adKey={`game-${data.appid}`} />
                 {/* <Banner
                   auto
                   // style={{ width: "100%", height: "100%" }}
